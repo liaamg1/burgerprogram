@@ -3,19 +3,28 @@
 #Grundkod för att testa att flask fungerar
 from flask import Flask, jsonify, request
 
-app = Flask(__name__)
+staticBurgers= [{"name":"BigMacho"},
+                {"name":"McMax"},
+                {"name":"ChickenMc"},
+                {"name":"McSkibidi"}]
 
-burgers = [
-    {"id": 1, "name": "Cheeseburger", "price": 5.99, "description": "A delicious cheeseburger."},
-    {"id": 2, "name": "Bacon Burger", "price": 6.99, "description": "A juicy burger topped with crispy bacon."},
-    {"id": 3, "name": "Veggie Burger", "price": 4.99, "description": "A hearty veggie burger."}
-]
+
+app = Flask(__name__)
+def frontpage1():
+    page = "<h1>Welcome to DonaldsMax</h1>"
+    page += "<P><UL>"
+    
+    for i in staticBurgers:
+        page += "<LI>" + i["name"]
+
+    page += "</UL>"
+    return page
+
 
 orders = []  # To store orders
-
-@app.route('/api/burgers', methods=['GET'])
-def get_burgers():
-    return jsonify(burgers)
+@app.route('/')
+def frontpage():
+    return frontpage1()
 
 if __name__ == '__main__':
     app.run(debug=True)
