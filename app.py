@@ -45,7 +45,13 @@ def ingredients(burger_name):
     ingredients_page = f"<h1>Ingredients for {burger_name}</h1>"
     ingredients_page += "<form method='POST'>"
     ingredients_page += "<label for='ingredients'>Select ingredients to keep:</label><br>"
+    
+    
+    # ingredients for the burgers, detta ska in i databasen senare eller kalla från databasen direkt
     default_ingredients = ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"]
+    
+    
+    
     for ingredient in default_ingredients:
         checked = "checked" if ingredient in burger.get('ingredients', default_ingredients) else ""
         ingredients_page += f"<input type='checkbox' name='ingredients' value='{ingredient}' {checked}>{ingredient}<br>"
@@ -63,11 +69,18 @@ def order():
         ingredients_to_remove = request.form.get('ingredients').split(',')
         burger = next((b for b in staticBurgers if b["name"] == burger_name), None)
         if burger:
+            
+            
+            
+            # default ingredients for the burgers, detta ska in i databasen senare eller raderas men kallas på från databasen
             current_ingredients = burger.get('ingredients', ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"])
+            
+            
             updated_ingredients = [ingredient for ingredient in current_ingredients if ingredient not in ingredients_to_remove]
             order = {"burger": burger_name, "ingredients": updated_ingredients}
             orders.append(order)
-            return jsonify({"message": "Order placed successfully!", "order": order})
+            removed_ingredients = [ingredient for ingredient in ingredients_to_remove if ingredient in current_ingredients]
+            return jsonify({"message": "Order placed successfully!", "order": order, "removed_ingredients": removed_ingredients})
 
     order_page = "<h1>Order Menu</h1>"
     order_page += "<form method='POST'>"
@@ -77,7 +90,7 @@ def order():
         if 'ingredients' in burger:
             order_page += f"Ingredients: {', '.join(burger['ingredients'])}<br>"
     order_page += "<div id='ingredientsList'></div>"
-    order_page += "<label for='ingredients'>Remove ingredients (comma separated):</label><br>"
+    order_page += "<label for='ingredients'>Remove ingredients (comma separated without spaces):</label><br>"
     order_page += "<input type='text' name='ingredients'><br>"
     order_page += "<input type='submit' value='Order'>"
     order_page += "</form>"
