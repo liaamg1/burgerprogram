@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  burgerorder:
+    build:
+      context: ./containers/burgerorder
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+  kitchenview:
+    build:
+      context: ./containers/kitchenview
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"

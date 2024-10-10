@@ -48,7 +48,7 @@ def ingredients(burger_name):
     
     
     # ingredients for the burgers, detta ska in i databasen senare eller kalla från databasen direkt
-    default_ingredients = ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"]
+    default_ingredients = ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"]
     
     
     
@@ -73,7 +73,7 @@ def order():
             
             
             # default ingredients for the burgers, detta ska in i databasen senare eller raderas men kallas på från databasen
-            current_ingredients = burger.get('ingredients', ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"])
+            current_ingredients = burger.get('ingredients', ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"])
             
             
             updated_ingredients = [ingredient for ingredient in current_ingredients if ingredient not in ingredients_to_remove]
@@ -99,10 +99,10 @@ def order():
     <script>
         function showIngredients(burgerName) {
             var ingredients = {
-                "BigMacho": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty"],
-                "McMax": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty"],
-                "ChickenMc": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Chicken patty"],
-                "McSkibidi": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty", "Skibidi sauce"]
+                "BigMacho": ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"],
+                "McMax": ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"],
+                "ChickenMc": ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"],
+                "McSkibidi": ["Meat", "Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Ketchup", "Mustard", "Mayonnaise"]
             };
             var ingredientsList = ingredients[burgerName];
             var ingredientsDiv = document.getElementById('ingredientsList');

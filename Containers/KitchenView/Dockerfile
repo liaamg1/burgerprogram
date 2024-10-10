@@ -1,21 +1,17 @@
-# Använd en basimage med Python
+# Use a lightweight Python image
 FROM python:3.9-slim
 
-# Ställ in arbetskatalog
+# Set the working directory inside the container
 WORKDIR /app
 
-# Kopiera requirements.txt och installera beroenden
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy the kitchen.py file into the container
+COPY kitchen.py .
 
-# Kopiera källkoden till containern
-COPY . .
+# Install Flask (if necessary)
+RUN pip install flask
 
-# Exponera Flask-porten
-EXPOSE 5000
+# Expose the port your application runs on (if using Flask's default port)
+EXPOSE 5001
 
-# Sätt miljövariabeln för Flask
-ENV FLASK_APP=app.py
-
-# Definiera körkommandot
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Command to run the kitchen.py script
+CMD ["python", "kitchen.py"]
