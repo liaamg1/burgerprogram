@@ -99,10 +99,10 @@ def order():
     <script>
         function showIngredients(burgerName) {
             var ingredients = {
-                "BigMacho": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"],
-                "McMax": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"],
-                "ChickenMc": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"],
-                "McSkibidi": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles"]
+                "BigMacho": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty"],
+                "McMax": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty"],
+                "ChickenMc": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "Chicken patty"],
+                "McSkibidi": ["Lettuce", "Tomato", "Onion", "Cheese", "Pickles", "patty", "Skibidi sauce"]
             };
             var ingredientsList = ingredients[burgerName];
             var ingredientsDiv = document.getElementById('ingredientsList');
