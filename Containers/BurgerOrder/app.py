@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect
 import sqlite3
 
 app = Flask(__name__)
@@ -117,7 +117,7 @@ def order():
             conn.execute('INSERT INTO orders (burger_name, ingredients) VALUES (?, ?)', (burger_name, ','.join(updated_ingredients)))
             conn.commit()
             conn.close()
-            return jsonify({"message": "Order placed successfully!", "order": {"burger": burger_name, "ingredients": updated_ingredients}})
+            return redirect('/order_confirmation')
 
     order_page = "<h1>Order Menu</h1>"
     order_page += "<form method='POST'>"
@@ -132,8 +132,11 @@ def order():
     order_page += "<br><a href='/'>Return to Home Page</a>"
     return order_page
 
-
+# Order confirmation page after placing an order
+@app.route('/order_confirmation', methods=['GET'])
+def order_confirmation():
+    return "<h1>Order placed successfully!</h1><br><a href='/'>Return to Home Page</a><br><a href='/order'>Place another order</a>"
 
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000, debug=True)
