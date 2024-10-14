@@ -38,8 +38,8 @@ def ingredients(burger_name):
         return jsonify({"message": "Burger not found"}), 404
 
     if request.method == 'POST':
-        ingredients = request.form.getlist('ingredients')
-        burger['ingredients'] = ingredients
+        ingredients1 = request.form.getlist('ingredients')
+        burger['ingredients'] = ingredients1
         return jsonify({"message": "Ingredients updated successfully!", "burger": burger})
 
     ingredients_page = f"<h1>Ingredients for {burger_name}</h1>"
@@ -77,10 +77,10 @@ def order():
             
             
             updated_ingredients = [ingredient for ingredient in current_ingredients if ingredient not in ingredients_to_remove]
-            order = {"burger": burger_name, "ingredients": updated_ingredients}
-            orders.append(order)
+            order1 = {"burger": burger_name, "ingredients": updated_ingredients}
+            orders.append(order1)
             removed_ingredients = [ingredient for ingredient in ingredients_to_remove if ingredient in current_ingredients]
-            return jsonify({"message": "Order placed successfully!", "order": order, "removed_ingredients": removed_ingredients})
+            return jsonify({"message": "Order placed successfully!", "order": order1, "removed_ingredients": removed_ingredients})
 
     order_page = "<h1>Order Menu</h1>"
     order_page += "<form method='POST'>"
