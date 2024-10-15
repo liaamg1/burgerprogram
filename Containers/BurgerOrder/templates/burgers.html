@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgers List</title>
+</head>
+<body>
+    <h1>Burgers List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Vegetarian</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for burger in burgers %}
+            <tr>
+                <td>{{ burger[0] }}</td>
+                <td>{{ burger[1] }}</td>
+                <td>{{ burger[2] }}</td>
+                <td>{{ burger[3] }}</td>
+                <td>{{ burger[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>

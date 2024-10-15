@@ -1,17 +1,21 @@
-# Use a lightweight Python image
+# Use a base image with Python
 FROM python:3.9-slim
 
-# Set the working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the kitchen.py file into the container
-COPY kitchen.py .
+# Copy requirements.txt and install dependencies
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Install Flask (if necessary)
-RUN pip install flask
+# Copy the source code to the container
+COPY . .
 
-# Expose the port your application runs on (if using Flask's default port)
+# Expose the Flask port
 EXPOSE 5001
 
-# Command to run the kitchen.py script
-CMD ["python", "kitchen.py"]
+# Set the environment variable for Flask
+ENV FLASK_APP=kitchen.py
+
+# Define the command to run the application
+CMD ["flask", "run", "--host=0.0.0.0"]

@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from burger_data import get_burgers
+from burger_data import get_burgers, display_burgers
 
 app = Flask(__name__)
 # Introduktion
@@ -8,9 +8,9 @@ def frontpage():
     return render_template('index.html')
 
 @app.route('/order', methods=['GET', 'POST'])
-def order():
-    pass
-
+def display_burgers():
+    burgers = get_burgers()
+    return render_template('burgers.html',burger=burgers)
 
 # Order confirmation page after placing an order
 @app.route('/order_confirmation', methods=['GET'])

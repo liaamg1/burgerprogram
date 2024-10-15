@@ -4,7 +4,7 @@ def get_burgers():
     db_connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="your_password",
+        password="root",
         database="burgardatabase"
     )
     
