@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-
+from burger_data import get_burgers
 
 app = Flask(__name__)
 @app.route('/')
