@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burgers List</title>
+    <title>Burgers</title>
 </head>
 <body>
-    <h1>Burgers List</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Vegetarian</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for burger in burgers %}
-            <tr>
-                <td>{{ burger[0] }}</td>
-                <td>{{ burger[1] }}</td>
-                <td>{{ burger[2] }}</td>
-                <td>{{ burger[3] }}</td>
-                <td>{{ burger[4] }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <h1>Available Burgers</h1>
+    <ul>
+        {% for burger in burgers %}
+        <li>
+            <strong>{{ burger.name }}</strong>: {{ burger.description }} - ${{ burger.price }}
+            {% if burger.is_vegetarian %}(Vegetarian){% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+        <label for="burgerName">Enter Burger Name:</label>
+        <input type="text" id="burgerName" required>
+        <button type="submit">Order</button>
+    </form>
+
+    <div id="orderResult"></div>
+
+    <a href="/">Back to Home</a>
+
+    <script>
+        document.getElementById('orderForm').onsubmit = async function(event) {
+            event.preventDefault();
+            const burgerName = document.getElementById('burgerName').value;
+
+            const response = await fetch('/send-order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: burgerName }),
+            });
+
+            const result = await response.json();
+            document.getElementById('orderResult').innerText = result.message;
+            document.getElementById('burgerName').value = ''; // Clear input
+        };
+    </script>
+</body>
+</html>

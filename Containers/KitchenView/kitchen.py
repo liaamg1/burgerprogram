@@ -1,15 +1,13 @@
-# kitchenView.py (running on port 5001)
-from flask import Flask, jsonify, request
-import requests
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "<h1>Welcome to the Kitchen View</h1><br><a href='/kitchenView'>View Orders</a>"
+@app.route('/receive-order', methods=['GET'])  # Ensure POST method is specified
+def receive_order():
+    order_data = request.json
+    burger_name = order_data.get('name')
+    print(f"Order received for: {burger_name}")
+    return jsonify({'message': f"Order for {burger_name} received!"})
 
-@app.route('/orders', methods=['POST'])
-def orders():
-    pass
 if __name__ == '__main__':
-    app.run(port=5001, debug=True)
+    app.run(port=5001)
