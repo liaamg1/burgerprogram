@@ -1,7 +1,13 @@
-from flask import Flask, jsonify, request, redirect
+from flask import Flask, jsonify, request, redirect, render_template
+#from flask_sqlalchemy import SQLAlchemy (Funkar inte för tillfället)
 import sqlite3
 
 app = Flask(__name__)
+
+#SQLALCHEMY DATABASE
+
+#Funkar inte för tillfället
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password123@localhost/burger'
 
 # Connect to the SQLite database
 def get_db_connection():
@@ -135,7 +141,19 @@ def order():
 # Order confirmation page after placing an order
 @app.route('/order_confirmation', methods=['GET'])
 def order_confirmation():
-    return "<h1>Order placed successfully!</h1><br><a href='/'>Return to Home Page</a><br><a href='/order'>Place another order</a>"
+    return render_template("orderconfirmation.html")
+
+#Create custom error messages:
+
+# Invalid URL
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
+
+# Internal Server Error
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template("500.html"), 500
 
 # Run the app
 if __name__ == '__main__':
