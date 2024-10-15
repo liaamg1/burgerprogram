@@ -2,9 +2,11 @@ from flask import Flask, jsonify, request, render_template
 
 
 app = Flask(__name__)
+# Introduktion
 @app.route('/')
 def frontpage():
-    pass
+    return render_template('index.html')
+
 @app.route('/order', methods=['GET', 'POST'])
 def order():
     pass
