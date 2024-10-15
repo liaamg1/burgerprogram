@@ -7,6 +7,11 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
+    environment:
+      DB_HOST: db  # Use the service name as the host
+      DB_USER: root  # Change as per your MySQL config
+      DB_PASSWORD: root  # Change as per your MySQL config
+      DB_DATABASE: burgardatabase  # Database name
 
   kitchenview:
     build:
@@ -14,3 +19,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
+
+  db:
+    image: mysql:5.7  # Use the MySQL image
+    restart: always
+    environment:
+      MYSQL_DATABASE: burgardatabase  # Database name
+      MYSQL_ROOT_PASSWORD: root  # Root password
+      MYSQL_USER: root  # User
+      MYSQL_PASSWORD: root  # User password
+    ports:
+      - "3306:3306"  # Expose MySQL port if needed (optional)
