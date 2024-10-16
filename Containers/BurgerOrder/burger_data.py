@@ -3,9 +3,9 @@ import mysql.connector
 # Function to get a database connection
 def get_db_connection():
     return mysql.connector.connect(
-        host="host.docker.internal",
+        host="db",
         user="root",
-        password="root",
+        password="hello",
         database="burgardatabase"
     )
 
