@@ -1,21 +1,21 @@
-# Använd en basimage med Python
+# Use a base image with Python
 FROM python:3.9-slim
 
-# Ställ in arbetskatalog
+# Set the working directory
 WORKDIR /app
 
-# Kopiera requirements.txt och installera beroenden
+# Copy requirements.txt and install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Kopiera källkoden till containern
+# Copy the source code to the container
 COPY . .
 
-# Exponera Flask-porten
+# Expose the Flask port
 EXPOSE 5000
 
-# Sätt miljövariabeln för Flask
+# Set environment variable for Flask
 ENV FLASK_APP=app.py
 
-# Definiera körkommandot
+# Define the command to run the application
 CMD ["flask", "run", "--host=0.0.0.0"]
