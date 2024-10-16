@@ -1,5 +1,6 @@
 import mysql.connector
 
+# Function to get a database connection
 def get_db_connection():
     return mysql.connector.connect(
         host="host.docker.internal",
@@ -8,16 +9,14 @@ def get_db_connection():
         database="burgardatabase"
     )
 
+# Function to get burgers from the database
 def get_burgers():
-    # Connect to the database
     db_connection = get_db_connection()
     cursor = db_connection.cursor()
 
-    # Query to fetch burgers
     cursor.execute("SELECT * FROM burgers")
     burgers = cursor.fetchall()
 
-    # Convert to list of dictionaries
     burger_list = []
     for burger in burgers:
         id, name, description, price, is_vegetarian = burger

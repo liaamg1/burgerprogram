@@ -2,25 +2,27 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
-# Example data to store orders
+# list to save the orders
 orders = []
 
+
+# frontpage route for kitchen
 @app.route('/')
 def index():
     return render_template('index.html')
 
+
+# route to receive orders
 @app.route('/receive-order', methods=['POST'])
 def receive_order():
-    order_data = request.json  # Capture the incoming data
-    burger_name = order_data.get('name')  # Extract the burger name
-    if burger_name:  # Check if burger_name is not None
-        orders.append(burger_name)  # Store the order
+    order_data = request.json  
+    burger_name = order_data.get('name') 
+    if burger_name:  
+        orders.append(burger_name)  
     return jsonify({'message': 'Order received'}), 200  # A simple response
 
-@app.route('/get-orders', methods=['GET'])
-def get_orders():
-    return jsonify(orders)
 
+# route to display orders in the kitchen
 @app.route('/display-orders', methods=['GET'])
 def display_orders():
     return render_template('orders.html', orders=orders)
