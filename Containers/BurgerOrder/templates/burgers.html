@@ -18,8 +18,13 @@
 
     <h2>Place Your Order</h2>
     <form id="orderForm">
-        <label for="burgerName">Enter Burger Name:</label>
-        <input type="text" id="burgerName" required>
+        <label for="burgerSelect">Choose a Burger:</label>
+        <select id="burgerSelect" required>
+            <option value="">Select a burger</option>
+            {% for burger in burgers %}
+            <option value="{{ burger.name }}">{{ burger.name }}</option>
+            {% endfor %}
+        </select>
         <button type="submit">Order</button>
     </form>
 
@@ -30,7 +35,7 @@
     <script>
         document.getElementById('orderForm').onsubmit = async function(event) {
             event.preventDefault();
-            const burgerName = document.getElementById('burgerName').value;
+            const burgerName = document.getElementById('burgerSelect').value;
 
             const response = await fetch('/send-order', {
                 method: 'POST',
@@ -42,7 +47,7 @@
 
             const result = await response.json();
             document.getElementById('orderResult').innerText = result.message;
-            document.getElementById('burgerName').value = ''; // Clear input
+            document.getElementById('burgerSelect').value = ''; // Clear selection
         };
     </script>
 </body>

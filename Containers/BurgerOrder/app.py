@@ -17,10 +17,14 @@ def display_burgers():
 def send_order():
     burger_name = request.args.get('name')
 
-    # Send the order to kitchen.py (assuming it's running at port 5001)
-    response = requests.get('http://localhost:5001/receive-order', params={'name': burger_name})
+    # Create the order data as a JSON payload
+    order_data = {'name': burger_name}
 
-    return jsonify({'message': response.json().get('message')}), response.status_code
+    # Use the service name 'kitchenview' instead of localhost
+    response = requests.post('http://kitchenview:5001/receive-order', json=order_data)
+
+    # Return the response from the kitchen service
+    return jsonify(response.json()), response.status_code
 
 @app.route('/order_confirmation', methods=['GET'])
 def order_confirmation():
