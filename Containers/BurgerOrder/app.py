@@ -15,16 +15,15 @@ def display_burgers():
 
 @app.route('/send-order', methods=['POST'])
 def send_order():
-    burger_name = request.args.get('name')
+    order_data = request.get_json()  # Get JSON data from the request
+    burger_name = order_data.get('name')  # Extract the burger name
 
     # Create the order data as a JSON payload
-    order_data = {'name': burger_name}
-
-    # Use the service name 'kitchenview' instead of localhost
-    response = requests.post('http://kitchenview:5001/receive-order', json=order_data)
+    response = requests.post('http://kitchenview:5001/receive-order', json={'name': burger_name})
 
     # Return the response from the kitchen service
     return jsonify(response.json()), response.status_code
+
 
 @app.route('/order_confirmation', methods=['GET'])
 def order_confirmation():
