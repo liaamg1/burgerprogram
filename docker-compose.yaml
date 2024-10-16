@@ -8,10 +8,12 @@ services:
     ports:
       - "5000:5000"
     environment:
-      DB_HOST: host.docker.internal  # Connect to the local MySQL
+      DB_HOST: db  
       DB_USER: root
-      DB_PASSWORD: root
+      DB_PASSWORD: hello  
       DB_DATABASE: burgardatabase
+    depends_on:
+      - db
 
   kitchenview:
     build:
@@ -19,3 +21,12 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
+
+  db:
+    image: mysql:5.7  # Use the MySQL 5.7 image
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hello
+      MYSQL_DATABASE: burgardatabase
+    ports:
+      - "3307:3306"

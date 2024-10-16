@@ -1,9 +1,9 @@
 import mysql.connector
 
 db_connection = mysql.connector.connect(
-    host="host.docker.internal",
+    host="db",
     user="root",
-    password="root",
+    password="hello",
     database="burgardatabase"
 )
 
