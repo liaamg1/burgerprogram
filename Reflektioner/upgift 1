@@ -1,40 +1,28 @@
-------------------------------------------------------
+Configuration Management
+Configuration management aims to ensure that software products remain consistent and that changes are handled in a structured manner.
+During our project, we used Git to control and organize changes in the code. This allowed us to:
+Track Changes
+We could easily see what changes were made, by whom, and when.
+This was particularly important when we needed to track bugs or revert to previous versions.
 
-*** Konfigurationshantering ***
+Collaborating Effectively
+By using branches, we were able to work on different features without disturbing each other’s work. 
+This facilitated collaboration within the team and helped us keep the code organized. We communicated continuously throughout the project to better understand what was happening and what had been written.
 
-Konfigurationshantering syftar på att säkerställa att programvaruprodukter förblir konsistenta och att ändringar hanteras på ett strukturerat sätt. Under vårt projekt har vi använt Git för att kontrollera och organisera förändringar i koden. Detta har tillåtit oss att:
-Spåra ändringar, Vi kunde enkelt se vilka ändringar som gjorts, av vem och när. Detta var särskilt viktigt när vi behövde spåra buggar eller återgå till tidigare versioner.
+Reverting to Previous Versions
+If we encountered issues with a new feature, we could easily revert to a stable version of the code, saving time and reducing stress during development. 
+In the context of the project, we learned the importance of having a clear strategy for configuration management to minimize conflicts and facilitate a smooth development process.
 
-------------------------------------------------------
+What Went Well?
+We effectively used Git to manage our project and track our progress. We could easily collaborate by creating and switching branches. 
+By making frequent commits and using clear messages, we kept our code organized.
 
-** Samarbeta effektivt **
-Genom att använda brancher kunde vi arbeta på olika funktioner utan att störa varandras arbete. Detta underlättade samarbetet inom teamet och hjälpte oss att hålla koden organiserad.
-Vi pratade och skrev till varandra hela tiden under projektets gång för att underlätta och bättre förstå vad som skedde och vad som blivit skrivet.
+What Went Less Well?
+We faced issues regarding the SQL connection to Docker Compose, and we had a very hard time choosing the database.
 
-------------------------------------------------------
+How Did We Solve Difficulties?
+We improved our communication within the team and began discussing which parts of the code we would work on before starting our changes. This reduced the number of conflicts.
 
-** Återgå till tidigare versioner **
-Om vi stötte på problem med en ny funktion kunde vi enkelt återgå till en stabil version av koden, vilket sparade tid och minskade stressen vid utvecklingen.
-I sammanhanget av projektet har vi lärt oss vikten av att ha en tydlig strategi för konfigurationshantering för att minimera konflikter och underlätta en smidig utvecklingsprocess.
-
-------------------------------------------------------
-
-** Vad gick bra? **
-Vi kunde effektivt använda Git för att hantera vårt projekt och spåra våra framsteg. Vi kunde enkelt samarbeta genom att skapa och byta brancher. Genom att göra frekventa commits och använda tydliga meddelanden höll vi vår kod organiserad.
-
-------------------------------------------------------
-
-** Vad gick mindre bra? **
-
-------------------------------------------------------
-
-** Hur löste vi svårigheterna? **
-Vi förbättrade vår kommunikation inom teamet och började diskutera vilka delar av koden vi skulle arbeta på innan vi påbörjade våra ändringar. Detta minskade antalet konflikter.
-
-------------------------------------------------------
-
-** Vad lyckades vi inte lösa? **
-Vi hade olika problem med databaser som inte ville fungera vid kopplingen eller att den inte ville returnera en value, däremot så lyckades vi lösa det tillslut.
-Sedan ville docker strula då vi inte vid en viss tid kunde starta både kitchen och app sammtidigt för att test köra vårat projekt, däremot så fixade vi det ändå tillslut.
-
-------------------------------------------------------
+What Did We Not Manage to Solve?
+We had various problems with databases that wouldn’t connect or return a value; however, we eventually managed to resolve those issues. 
+Additionally, Docker was problematic at times, as we couldn’t start both the kitchen and app simultaneously to test our project. Nevertheless, we managed to fix that in the end.

@@ -1,39 +1,33 @@
-------------------------------------------------------
-*** Test och debuggning ***
+esting and Debugging
 
+Identifying Functionality
+Modules to test:
 
-** Identifiera Funktionalitet ** 
-Moduler att testa: App: API-ändpunkter för att hämta de olika burgarna 
-API-ändpunkt för att skicka beställningar Funktioner för att hantera anpassningar av beställningar App. 
-Databasens API för att hämta och lagra varuinformation KitchenView. 
-API-ändpunkt för att ta emot och visa beställningar 
+App: API endpoints for retrieving various burgers
+API endpoint for submitting orders
+Functions for handling order customizations
+Database API for retrieving and storing product information
+Kitchen View: API endpoint for receiving and displaying orders
+Testing Methods
+Tests to perform:
 
-------------------------------------------------------
+Unit Tests: Test each module to ensure they return correct values.
+Example: When a user requests to order a burger, the API should return a list of available burgers.
+Integration Tests: Test the flow between modules from App to Kitchen View.
+Example: When an order is submitted, it should appear in Kitchen View with the correct information.
+Error Handling Tests: Simulate incorrect inputs and ensure the system handles them correctly.
+Example: What happens if a user tries to order a non-existent item?
+Test Runs
 
-** Testmetoder **
-Tester att utföra: Enhetstester: Testa varje modul för att säkerställa att de returnerar korrekta värden. 
-Exempel: När en användare begär att beställa en hamburgare, bör API returnera en lista med tillgängliga hamburgare. 
-Integrationstester: Testa flödet mellan moduler från App till KitchenView. Exempel: När en beställning skickas, ska den dyka upp i KitchenView med korrekt information. 
-Felhanteringstester: Simulera felaktiga indata och se till att systemet hanterar dem korrekt. Exempel: Vad händer om en användare försöker beställa en icke-existerande vara? 
+Regular Testing: Run tests after each major functional change to ensure nothing breaks.
+Conducted cross-browser testing to verify that the website functions correctly on different browsers.
+Run tests when making commits to check that no new bugs arise.
+When Tests Fail: When encountering issues, we discussed the error within the team to find solutions that address the problem.
+This plan provides a good overview of how we structured our tests to ensure our application is robust and functions as intended!
+During our testing process, we focused on carefully debugging specific parts of our code. One key aspect was checking the communication between app.py and kitchen.py. In kitchen.py, we implemented a response for "Order received" that would be triggered when app.py sent information. To carry out the tests, we created temporary burgers, allowing us to simulate orders despite previous issues with the database.
 
-------------------------------------------------------
+We continued to work on the code until we eventually received a correct response. During this process, we encountered several issues. A specific example was when we mistakenly specified POST in app.py instead of GET for kitchen.py. This incorrect method led to information not being sent or received correctly, breaking the communication between the two files. By identifying and correcting this mistake, we restored the intended functionality and ensured that kitchen.py received the information as intended. This example highlights the importance of debugging in solving problems and improving code functionality.
 
+We also conducted similar tests for the SQL database. To ensure the database could communicate correctly with the code, we implemented a print function. This helped us determine whether the issue lay with the database or in the communication between the database and the code. We discovered that the code was correct, but the connection to the local Docker MySQL database was not functioning as intended. After careful consideration, we decided to switch to PostgreSQL. Following this change, everything worked as it should, after some adjustments.
 
-** Testkörningar **
-Regelbunden testning: Kör testerna efter varje större funktionell ändring för att säkerställa att ingenting bryts. 
-Gjort cross-Browser test för att kontrollera hemsidan funktioner även fungerar på olika webbläsare. 
-Kört tester vi när vi gör comits för att se att inga nya buggar uppstår. 
-Vid testmisslyckande: När vi har fått problem så har diskuterat felet i teamet för att hitta lösningar som åtgärdar problemet. 
-Den här planen ger en bra översikt för hur vi strukturerat våra tester för att säkerställa att vår applikation är robust och fungerar som den ska!
-
-Under vår testningsprocess har vi fokuserat på att noggrant debugga specifika delar av vår kod. Ett av de centrala momenten var att kontrollera kommunikationen mellan app.py och kitchen.py. I kitchen.py implementerade vi en respons för "Order received" som skulle aktiveras när app.py skickade information. För att kunna genomföra testerna hade vi skapat temporära hamburgare, vilket gjorde det möjligt att simulera beställningar trots tidigare problem med databasen.
-
-Vi fortsatte att arbeta med koden tills vi till slut fick en korrekt respons. Under denna process stötte vi på flera problem. Ett konkret exempel var när vi av misstag angav POST i app.py istället för GET för kitchen.py. Denna felaktiga metod ledde till att informationen inte kunde skickas eller tas emot korrekt, vilket bröt kommunikationen mellan de två filerna. Genom att identifiera och korrigera denna felaktighet återfick vi rätt funktionalitet och säkerställde att kitchen.py mottog informationen som avsett. Detta exempel understryker hur viktigt debugging är för att lösa problem och förbättra kodens funktionalitet.
-
-Vi har även genomfört liknande tester för SQL-databasen. För att säkerställa att databasen kunde kommunicera korrekt med koden implementerade vi en print-funktion. Detta hjälpte oss att avgöra om problemet låg i databasen eller i kommunikationen mellan databasen och koden. Vi upptäckte att koden var korrekt, men att kopplingen till den lokala Docker-databasen MySQL inte fungerade som avsett. Efter noggrant övervägande beslutade vi oss för att byta till PostgreSQL. Därefter fungerade allt som det skulle, efter lite om och men.
-
-Genom att noggrant testa och felsöka varje steg har vi säkerställt att vårt system nu fungerar som det ska.
-------------------------------------------------------
-
-
-
+By carefully testing and troubleshooting each step, we have ensured that our system now functions as intended.
