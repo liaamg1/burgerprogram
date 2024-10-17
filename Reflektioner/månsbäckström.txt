@@ -12,7 +12,39 @@ EXECUTED:
 •	Flask installed
 •	VS CODE will be my text editor, also used in other courses
 •	Tried to enter localhost:5000, with the simple message of: (“<h1>”Hello World</h1>”)
-Approximately 3 hours work
+Approximately: 3 hours work
 Until next time:
 Next time I want to enter localhost:5000, I am not sure what the issue is of right now I might try to use another text editor,
+Collaboration:
+Our group has had multiple sessions debating on how to get started on the project and what tools to use. Example of these
+tools are JavaScript, Node, HTML, and Flask. Flask was our pick when the teacher said we could use it and created a example
+using Flask. Our group tried to create seperate branches for Configure management but it didn't work out for us so we decided to 
+commit into the main branch when commiting a change.
+ 
+2024-10-13
+The problems from last update: 
+The problems from last update were easily fixed with:  if __name__ == '__main__':
+Since the last update I have gotten an understanding of Docker, html, Jinja2, SQLAlchemy, MySQL, API, GUI, DATABAS, GIT and GITHUB.
+EXECUTED:
+•	Docker installed
+•	MySQL installed
+•	GIT installed
+•	SQLAlchemy installed
+•	Jinja2 installed
+I have learnt that there are multiple SQL,s you can use and our group has tried MySQL, SQLAlchemy and SQLlite3
+Git commands:
+Get started with git:
+git config --global user.name "Your Name"
+git config --global user.email "you@youraddress.com"
+git config --global push.default matching
+git config --global alias.co checkout
+git init
+touch .gitignore ( creates a file that ignores unnecessary data when you commit)
+Commit with git:
+git add . (adds everything from your project in your current file position)
+git commit -am ‘comment’
+Approximately 16 hours work
+Collaboration:
+We have decided upon using Flask, Jinja2, HTML 
+
 
