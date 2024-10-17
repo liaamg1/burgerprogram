@@ -1,0 +1,13 @@
+Konfigurationshantering
+Konfigurationshantering syftar på att säkerställa att programvaruprodukter förblir konsistenta och att ändringar hanteras på ett strukturerat sätt. Under vårt projekt har vi använt Git för att kontrollera och organisera förändringar i koden. Detta har tillåtit oss att:
+Spåra ändringar: Vi kunde enkelt se vilka ändringar som gjorts, av vem och när. Detta var särskilt viktigt när vi behövde spåra buggar eller återgå till tidigare versioner.
+Samarbeta effektivt: Genom att använda brancher kunde vi arbeta på olika funktioner utan att störa varandras arbete. Detta underlättade samarbetet inom teamet och hjälpte oss att hålla koden organiserad.
+Återgå till tidigare versioner: Om vi stötte på problem med en ny funktion kunde vi enkelt återgå till en stabil version av koden, vilket sparade tid och minskade stressen vid utvecklingen.
+I sammanhanget av projektet har vi lärt oss vikten av att ha en tydlig strategi för konfigurationshantering för att minimera konflikter och underlätta en smidig utvecklingsprocess.
+Vad gick bra?
+Vi kunde effektivt använda Git för att hantera vårt projekt och spåra våra framsteg. Vi kunde enkelt samarbeta genom att skapa och byta brancher. Genom att göra frekventa commits och använda tydliga meddelanden höll vi vår kod organiserad.
+Vad gick mindre bra?
+Ibland stötte vi på merge-konflikter när flera medlemmar gjorde ändringar i samma fil samtidigt. Det krävde att vi tog oss tid att kommunicera och lösa dessa konflikter, vilket tog längre tid än planerat.
+Hur löste vi svårigheterna?
+Vi förbättrade vår kommunikation inom teamet och började diskutera vilka delar av koden vi skulle arbeta på innan vi påbörjade våra ändringar. Detta minskade antalet konflikter.
+Vad lyckades vi inte lösa?
