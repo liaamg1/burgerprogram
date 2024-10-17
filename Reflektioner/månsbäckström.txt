@@ -30,7 +30,7 @@ EXECUTED:
 •	MySQL installed
 •	GIT installed
 •	SQLAlchemy installed
-•	Jinja2 installed
+•   Jinja2 installed
 I have learnt that there are multiple SQL,s you can use and our group has tried MySQL, SQLAlchemy and SQLlite3
 Git commands:
 Get started with git:
@@ -47,4 +47,22 @@ Approximately 16 hours work
 Collaboration:
 We have decided upon using Flask, Jinja2, HTML 
 
+2024-10-14
+Since the last update we have decided that our current solution to writing code was to hard to understand, the problem was that the HTML code
+was written with our Python code. To fix this i created a folder called templates and to access this code you just have to
+add render_templates in the beginning. This way it was easier for our group to write code. In the folder templates html
+files will be kept. 
+EXECUTED:
+•   added render_templates
+•   added folder (templates) 
+•   HTML file index was added, INDEX gives a simple Introduction to localhost:5000
+Approximately 12 hours work
+Until next time:
+We are having issues with the SQL, many hours go to watching informational videos that allow us to have a proper 
+database. At this moment we use SQLlite3 and we are having issues with it.
+
+
+
+
+ 
 
