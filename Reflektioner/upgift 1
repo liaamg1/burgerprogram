@@ -25,7 +25,6 @@ Vi kunde effektivt använda Git för att hantera vårt projekt och spåra våra 
 ------------------------------------------------------
 
 ** Vad gick mindre bra? **
-Ibland stötte vi på merge-konflikter när flera medlemmar gjorde ändringar i samma fil samtidigt. Det krävde att vi tog oss tid att kommunicera och lösa dessa konflikter, vilket tog längre tid än planerat.
 
 ------------------------------------------------------
 
