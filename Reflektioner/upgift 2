@@ -1,23 +1,47 @@
-Implementation och Dokumentation
+------------------------------------------------------
 
-Projektet i stort
-Projektet handlar om att bygga en enkel restaurangbeställningssystem där användare kan välja och beställa hamburgare, samtidigt som köket kan se och hantera dessa beställningar. Systemet är uppdelat i två containrar: Burger Order som hanterar kundens gränssnitt och beställningar, och Kitchen View som visar aktuella beställningar till köket. Genom att använda Flask som webbramverk och en PostgreSQL-databas för datalagring strävar vi efter en smidig och interaktiv användarupplevelse.
-Burger Order
-Containern Burger Order ansvarar för att visa tillgängliga hamburgare och ta emot beställningar från kunder. I denna modul har vi skapat rutter för att visa hamburgare och ta emot beställningar via en POST-förfrågan. Den hämtar också hamburgardata från en databas. Här har vi implementerat en metod för att lägga till och ta bort ingredienser, vilket ger kunderna flexibilitet att anpassa sina beställningar.
-Kitchen View
-Containern Kitchen View har som syfte att ge kökspersonalen en översikt av inkommande beställningar. Denna modul innehåller rutter för att ta emot beställningar och visa aktuella ordrar. Med hjälp av Flask-rendering kan kökspersonalen enkelt se och hantera beställningar i realtid. Vi har också implementerat en responsiv layout för att säkerställa att informationen presenteras på ett klart och tydligt sätt.
-Varje modul
-app.py (Burger Order): Huvudmodulen som hanterar alla kundinteraktioner, inklusive att hämta hamburgare från databasen och skicka beställningar till köket. Här gör vi också validering av beställningar och kommunikation med köket.
-burger_data.py: Modulen ansvarar för att interagera med databasen, inklusive att skapa, läsa och uppdatera hamburgardata. Den innehåller även logik för att säkerställa att endast tillgängliga hamburgare visas för kunder.
-kitchen.py (Kitchen View): Denna modul hanterar logiken för kökets gränssnitt, inklusive att ta emot och visa beställningar. Den säkerställer att köket är informerat om nya beställningar och möjliggör en effektiv arbetsprocess.
-HTML-filer: Dessa filer innehåller gränssnittet för både kunder och kökspersonal. Varje HTML-fil är designad för att presentera relevant information på ett användarvänligt sätt, med hjälp av Flask-mallar för dynamiskt innehåll.
+*** Implementation och Dokumentation ***
 
-Erfarenheter av Implementation
-Vad gick bra?
+** Projektet i stort ** 
+Projektet handlar om att bygga en enkel restaurangbeställningssystem där användare kan välja och beställa hamburgare, samtidigt som köket kan se och hantera dessa beställningar. 
+Systemet är uppdelat i två containrar: 
+- Burger Order som hanterar kundens gränssnitt och beställningar
+- Kitchen View som visar aktuella beställningar till köket. 
+Genom att använda Flask som webbramverk och en PostgreSQL-databas för datalagring strävar vi efter en smidig och interaktiv användarupplevelse.
+
+
+** Burger Order ** 
+Containern Burger Order ansvarar för att visa tillgängliga hamburgare och ta emot beställningar från kunder. 
+I denna modul har vi skapat rutter för att visa hamburgare och ta emot beställningar via en POST-förfrågan. 
+Den hämtar också hamburgardata från en databas. Här har vi implementerat en metod för att lägga till och ta bort ingredienser, vilket ger kunderna flexibilitet att anpassa sina beställningar.
+
+
+** Kitchen View **
+Containern Kitchen View har som syfte att ge kökspersonalen en översikt av inkommande beställningar. 
+Denna modul innehåller rutter för att ta emot beställningar och visa aktuella ordrar. Med hjälp av Flask-rendering kan kökspersonalen enkelt se och hantera beställningar i realtid. 
+Vi har också implementerat en responsiv layout för att säkerställa att informationen presenteras på ett klart och tydligt sätt.
+
+
+** Varje modul **
+- app.py (Burger Order): Huvudmodulen som hanterar alla kundinteraktioner, inklusive att hämta hamburgare från databasen och skicka beställningar till köket. Här gör vi också validering av beställningar och kommunikation med köket.
+- burger_data.py: Modulen ansvarar för att interagera med databasen, inklusive att skapa, läsa och uppdatera hamburgardata. Den innehåller även logik för att säkerställa att endast tillgängliga hamburgare visas för kunder.
+- kitchen.py (Kitchen View): Denna modul hanterar logiken för kökets gränssnitt, inklusive att ta emot och visa beställningar. Den säkerställer att köket är informerat om nya beställningar och möjliggör en effektiv arbetsprocess.
+- HTML-filer: Dessa filer innehåller gränssnittet för både kunder och kökspersonal. Varje HTML-fil är designad för att presentera relevant information på ett användarvänligt sätt, med hjälp av Flask-mallar för dynamiskt innehåll.
+
+------------------------------------------------------
+
+*** Erfarenheter av Implementation ***
+
+** Vad gick bra? **
 Vår tydliga plan för struktureringen av komponenterna ledde till effektiv kodning. Alla teammedlemmar bidrog aktivt, vilket gjorde det enklare att hålla fokus.
-Vad gick mindre bra?
+
+** Vad gick mindre bra? **
 Vissa funktioner tog längre tid att implementera än förväntat, vilket ledde till justeringar i vår tidsplan.
-Hur löste vi svårigheterna?
+
+** Hur löste vi svårigheterna? **
 Regelbundna möten för att diskutera framsteg och hinder hjälpte oss att identifiera problem tidigt och hålla projektet på rätt spår.
-Vad lyckades vi inte lösa?
+
+** Vad lyckades vi inte lösa? **
 Vi hade inte tillräckligt med tid för att implementera alla önskade funktioner, men vi prioriterade de mest kritiska.
+
+------------------------------------------------------
