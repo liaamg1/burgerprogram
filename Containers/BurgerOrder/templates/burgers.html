@@ -25,6 +25,21 @@
             <option value="{{ burger.name }}">{{ burger.name }}</option>
             {% endfor %}
         </select>
+        <h2>Customize Your Burger</h2>
+<form id="ingredientForm">
+    <h3>Available Ingredients:</h3>
+    <div>
+        <input type="checkbox" id="lettuce" name="ingredients" value="Lettuce">
+        <label for="lettuce">Lettuce</label><br>
+        <input type="checkbox" id="tomato" name="ingredients" value="Tomato">
+        <label for="tomato">Tomato</label><br>
+        <input type="checkbox" id="cheese" name="ingredients" value="Cheese">
+        <label for="cheese">Cheese</label><br>
+        <input type="checkbox" id="bacon" name="ingredients" value="Bacon">
+        <label for="bacon">Bacon</label><br>
+    </div>
+</form>
+
         <button type="submit">Order</button>
     </form>
 
@@ -37,18 +52,26 @@
             event.preventDefault();
             const burgerName = document.getElementById('burgerSelect').value;
 
+            const ingredients = [];
+        document.querySelectorAll('input[name="ingredients"]:checked').forEach(ingredient => {
+            ingredients.push(ingredient.value);
+        });
+
+
             const response = await fetch('/send-order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name: burgerName }),
+                body: JSON.stringify({ name: burgerName, ingredients: ingredients }),
             });
 
             const result = await response.json();
             document.getElementById('orderResult').innerText = result.message;
             document.getElementById('burgerSelect').value = ''; // Clear selection
-        };
+            document.querySelectorAll('input[name="ingredients"]:checked').forEach(ingredient => {
+                ingredient.checked = false;
+        });
     </script>
 </body>
 </html>

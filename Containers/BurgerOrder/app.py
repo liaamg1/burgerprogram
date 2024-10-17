@@ -21,9 +21,9 @@ def display_burgers():
 def send_order():
     order_data = request.get_json()  
     burger_name = order_data.get('name')  
-
+    ingredients = order_data.get('ingredients', [])
     
-    response = requests.post('http://kitchenview:5001/receive-order', json={'name': burger_name})
+    response = requests.post('http://kitchenview:5001/receive-order', json={'name': burger_name, 'ingredients': ingredients })
 
     
     return jsonify(response.json()), response.status_code

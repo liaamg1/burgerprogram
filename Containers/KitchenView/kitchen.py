@@ -17,7 +17,9 @@ def index():
 def receive_order():
     order_data = request.json  
     burger_name = order_data.get('name') 
+    ingredients = order_data.get('ingredients', []) 
     if burger_name:  
+        order_details = f"{burger_name} with ingredients: {', '.join(ingredients)}"
         orders.append(burger_name)  
     return jsonify({'message': 'Order received'}), 200  # A simple response
 
