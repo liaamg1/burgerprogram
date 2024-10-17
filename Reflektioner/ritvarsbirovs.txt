@@ -32,6 +32,9 @@ Vi delade upp kodningsarbetet i olika moduler, där en person ansvarade för att
 Varje kodare arbetade på sin egen branch, och när en funktion var färdiggjord skickades en pull request för kodgranskning innan koden mergades in i huvudbranchen. 
 För att upprätthålla en hög kodkvalitet följde vi enhetliga kodstandarder, såsom PEP8 för Python.
 
+Efter varje commit så dubbelkollade vi ifall koden fungerade bra tillsammans med våran "stabila" kod-grund och ifall den inte gjorde det så mergade vi inte tillsammans committen och skrev om koden.
+Detta gjorde vi för att undvika skapa nya problem och mer förvirring. Varje commit blev inte använt då något inte fungerade, däremot varje commit som fungerade lade vi till som merge till koden och utvecklade vidare.
+
 4. Konfigurationshantering
 För att hålla vår utvecklingsmiljö konsekvent använde vi en requirements.txt-fil där vi definierade alla beroenden. 
 Vi använde också en Dockerfile för att sätta upp en containeriserad miljö där applikationen kunde köras på samma sätt för alla utvecklare, men också kunna köra
@@ -40,6 +43,13 @@ båda filer sammtidigt.
 5. Testning och debugging
 Under kodningen stötte vi på flera buggar, så vi använde Visual Studio Codes inbyggda debugging-verktyg för att spåra problem. 
 Vi lade även till enhetstester för vissa funktioner för att säkerställa att de fungerade som de skulle. 
+
+Vi lade till debugging tester på specefika funktioner inom app.py och databasen för att kunna se vilka värden som kom fram och vad som saknades inom det. 
+Enhetstester användes för att testa ifall vissa funktioner skulle fungera som vi hade tänkt oss såsom "get_db_connection" och "get_burgers".
+Vi fick fram att våra två första försök på att fixa "get_db_connection" inte ville kopplas då vi behövde leta vidare på vad som problemet var och hur vi kunde lösa det.
+Vi gjorde debug på listan där burgarna sparas efter de har blivit beställda, där vi fick upp att listan inte sparar ner någon beställning alls där vi snabbt fixade problemet för att få det att funka.
+Inom app.py så kollade vi ifall routes funkade vilket de gjorde för att vi sedan skulle kunna använda HTML filer för att slippa skriva HTML kod inom app.py för att göra den mer lättläst och förstårlig.
+
 Det hade varit fördelaktigt om vi implementerat mer testdriven utveckling från början, eftersom det skulle ha hjälpt oss att hitta buggar tidigare som sedan
 dök upp under kodningen.
 
@@ -74,5 +84,6 @@ Jag har varit deltagande i både kodningen men också planeringen, där jag har 
 Jag har committat en liten del där jag skapat grund koden vi utgår ifrån och försökt koppla kitchen till app och försökt koppla databasen till
 app efter den blivit skapad. Jag har delvis hjälp mina teammedlemmar att göra sitt då de har fått problem eller frågor.
 
-
 Jag har lärt mig hur man arbetar mer inom teamet och hur man kan lägga upp planeringen samt hur man arbetar med containers och databaser.
+
+Jag har däremot skrivit detta ingenjörs bok i ett vanligt dokument och uppdaterat det där för varje commit jag gjort och vad som har fungerat och inte. Jag såg inte att man skulle skriva boken i github vilket gjorde att jag behövde kopiera in hela mitt dokument in hit.
