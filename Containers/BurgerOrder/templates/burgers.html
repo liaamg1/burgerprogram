@@ -25,6 +25,10 @@
             <option value="{{ burger.name }}">{{ burger.name }}</option>
             {% endfor %}
         </select>
+
+        <label for="specialWishes">Special Wishes:</label>
+        <textarea id="specialWishes" rows="4" cols="50" placeholder="Any special requests?"></textarea>
+
         <button type="submit">Order</button>
     </form>
 
@@ -36,18 +40,20 @@
         document.getElementById('orderForm').onsubmit = async function(event) {
             event.preventDefault();
             const burgerName = document.getElementById('burgerSelect').value;
+            const specialWishes = document.getElementById('specialWishes').value;
 
             const response = await fetch('/send-order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name: burgerName }),
+                body: JSON.stringify({ name: burgerName, wishes: specialWishes }),
             });
 
             const result = await response.json();
             document.getElementById('orderResult').innerText = result.message;
             document.getElementById('burgerSelect').value = ''; // Clear selection
+            document.getElementById('specialWishes').value = ''; // Clear special wishes
         };
     </script>
 </body>

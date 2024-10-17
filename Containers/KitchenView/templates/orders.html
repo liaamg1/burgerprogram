@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Orders</title>
+    <title>Orders</title>
 </head>
 <body>
-    <h1>Current Orders</h1>
+    <h1>Received Orders</h1>
     <ul>
         {% for order in orders %}
-            <li>{{ order }}</li>
+        <li>
+            <strong>Burger:</strong> {{ order.burger }} 
+            {% if order.wishes %} - <strong>Special Wishes:</strong> {{ order.wishes }} {% endif %}
+        </li>
         {% endfor %}
     </ul>
     <a href="/">Back to Home</a>

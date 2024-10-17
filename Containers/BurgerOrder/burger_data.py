@@ -1,6 +1,6 @@
 import psycopg2
 
-# Function to get a database connection
+#Function to get a database connection
 def get_db_connection():
     return psycopg2.connect(
         host="db",
@@ -9,7 +9,7 @@ def get_db_connection():
         database="burgardatabase"
     )
 
-# Function to get burgers from the database
+#Function to get burgers from the database
 def get_burgers():
     db_connection = get_db_connection()
     cursor = db_connection.cursor()
@@ -33,10 +33,10 @@ def get_burgers():
     insert_burgers_query = """
     INSERT INTO burgers (name, description, price, is_vegetarian)
     VALUES
-        ('BigMacho', 'The biggest burger in town', 9.99, FALSE),
-        ('McMax', 'The most popular burger', 9.95, FALSE),
-        ('ChickenMc', 'The best chicken burger', 8.95, FALSE),
-        ('McSkibidi', 'The most unique Skibidi burger in town', 10.99, FALSE)
+        ('BigMacho', 'Lettuce, Bacon, BigMacho-sauce', 9.99, FALSE),
+        ('McMax', 'Cheese, Bacon, lettuce', 9.95, FALSE),
+        ('ChickenMc', 'Cheese, BBQ-Sauce, Bacon', 8.95, FALSE),
+        ('McSkibidi', 'Cheese, Lettuce, Tomato, Mayonaise', 10.99, FALSE)
     ON CONFLICT (name) DO NOTHING;  -- Avoid duplicates on insert
     """
     cursor.execute(insert_burgers_query)

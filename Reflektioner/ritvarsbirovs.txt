@@ -1,0 +1,70 @@
+---------------------------------------------------------------
+Ingenjörsdagbok – Burgerprojekt
+Projektöversikt
+Introduktion
+
+Teammedlemmar: Ritvars Birovs, Hugo Jismark, Liam Gustafsson, Levin Bandrez, Måns Bäckström
+
+I detta projekt arbetade vi i ett team för att utveckla en enkel "burger"-applikation. Vi använde GitHub som vårt versionshanteringssystem, 
+där vi kunde samarbeta effektivt och hålla koll på vår kod. Vårt mål var att få praktisk erfarenhet av Git och GitHub, 
+samtidigt som vi lärde oss hur man arbetar tillsammans i en utvecklingsmiljö.
+---------------------------------------------------------------
+
+Syfte
+Målet med projektet var att få en djupare förståelse för samarbete och versionshantering inom mjukvaruutveckling. 
+Genom att arbeta med GitHub lärde vi oss hantera repositories, commit, push, pull, och merge-processer. 
+Vi använde även olika programmeringsspråk och fokuserade på kodkvalitet, samarbete och kommunikation.
+
+---------------------------------------------------------------
+Arbetsflöde
+1. Skapa ett repository
+Vi inledde projektet genom att skapa ett repository på GitHub. En av gruppmedlemmarna tog ansvar för detta och bjöd in de andra medlemmarna. 
+Vi använde en branch-strategi där vi skapade separata brancher för varje funktion för att undvika merge-konflikter.
+
+2. Planering och samarbete
+Vi började med att diskutera projektets struktur och vilka funktioner som var viktigast att implementera först. 
+Genom att använda OneNote så delade vi upp uppgifter mellan oss och såg till att alla hade tydliga roller. 
+Kommunikation skedde via Snapchat / Discord där vi höll varandra uppdaterade om vad vi arbetade med och om någon stötte på problem,
+där vi sedan kunde hjälpas åt.
+
+3. Implementation och kodning
+Vi delade upp kodningsarbetet i olika moduler, där en person ansvarade för att sätta upp en container med filerna app.py och kitchen.py. 
+Varje kodare arbetade på sin egen branch, och när en funktion var färdiggjord skickades en pull request för kodgranskning innan koden mergades in i huvudbranchen. 
+För att upprätthålla en hög kodkvalitet följde vi enhetliga kodstandarder, såsom PEP8 för Python.
+
+4. Konfigurationshantering
+För att hålla vår utvecklingsmiljö konsekvent använde vi en requirements.txt-fil där vi definierade alla beroenden. 
+Vi använde också en Dockerfile för att sätta upp en containeriserad miljö där applikationen kunde köras på samma sätt för alla utvecklare, men också kunna köra
+båda filer sammtidigt.
+
+5. Testning och debugging
+Under kodningen stötte vi på flera buggar, så vi använde Visual Studio Codes inbyggda debugging-verktyg för att spåra problem. 
+Vi lade även till enhetstester för vissa funktioner för att säkerställa att de fungerade som de skulle. 
+Det hade varit fördelaktigt om vi implementerat mer testdriven utveckling från början, eftersom det skulle ha hjälpt oss att hitta buggar tidigare som sedan
+dök upp under kodningen.
+
+6. Slutgiltig kod och leverans
+Efter att ha genomfört debugging och testning kunde vi slutföra projektet. Alla i teamet bidrog till den sista poleringen, 
+och vi såg till att varje funktion var testad och fungerade som den skulle. 
+Pull requests och kodgranskning var en avgörande del av att säkerställa att kvaliteten var hög.
+
+---------------------------------------------------------------
+Reflektioner och slutsatser
+Utmaningar
+En av de största utmaningarna var att hantera merge-konflikter som uppstod när flera medlemmar arbetade på olika brancher samtidigt. 
+Detta krävde god kommunikation och noggrann hantering av commits för att säkerställa att ingen kod förlorades eller att olika koder överskrevs.
+Det blev en svår start då vi inte visste hur vi riktigt skulle sätta upp allt men efter lite tankar så gick det fort frammåt och planerat.
+
+Lärdomar
+Vi lärde oss vikten av att ha tydliga commit-meddelanden och göra regelbundna pushes till GitHub för att undvika stora, svårhanterade konflikter. 
+Vi insåg även värdet av att arbeta på separata brancher och att använda pull requests för att granska och förbättra varandras kod.
+Vi lärde oss också den stora vikten av kommunikation och sammarbete för att föra projektet frammåt då vi behövde lita på varandra och kunna hjälpa varandra frammåt.
+
+Förbättringsförslag
+I framtida projekt skulle det vara fördelaktigt att införa en kodgranskningsprocess tidigare, samt att använda fler automatiserade tester för att fånga buggar. 
+Vi kunde också ha förbättrat vår kommunikation ytterligare genom att regelbundet prata och skriva vad som har hänt och skrivits.
+
+Genom detta projekt fick vi en djupare förståelse för versionskontroll och samarbete i mjukvaruutveckling. 
+Att använda GitHub och Git gjorde det möjligt för oss att effektivt hantera kod, samtidigt som vi kunde arbeta parallellt utan att störa varandra.
+
+---------------------------------------------------------------
