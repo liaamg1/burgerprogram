@@ -68,3 +68,11 @@ Genom detta projekt fick vi en djupare förståelse för versionskontroll och sa
 Att använda GitHub och Git gjorde det möjligt för oss att effektivt hantera kod, samtidigt som vi kunde arbeta parallellt utan att störa varandra.
 
 ---------------------------------------------------------------
+Mina commits och det jag har deltagit med
+
+Jag har varit deltagande i både kodningen men också planeringen, där jag har skapat våra roller och suttit upp planeringen för hur det ska vara i OneNote.
+Jag har committat en liten del där jag skapat grund koden vi utgår ifrån och försökt koppla kitchen till app och försökt koppla databasen till
+app efter den blivit skapad. Jag har delvis hjälp mina teammedlemmar att göra sitt då de har fått problem eller frågor.
+
+
+Jag har lärt mig hur man arbetar mer inom teamet och hur man kan lägga upp planeringen samt hur man arbetar med containers och databaser.

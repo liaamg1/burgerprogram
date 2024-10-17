@@ -15,16 +15,16 @@ def display_burgers():
     burgers = get_burgers()
     return render_template('burgers.html', burgers=burgers)
 
-# Example data to store orders
+# displays the order form and what the user ordered
 @app.route('/send-order', methods=['POST'])
 def send_order():
     order_data = request.get_json()
     burger_name = order_data.get('name')
-    special_wishes = order_data.get('wishes')  # Get special wishes
+    special_wishes = order_data.get('wishes') 
 
     response = requests.post('http://kitchenview:5001/receive-order', json={
         'name': burger_name,
-        'wishes': special_wishes  # Send special wishes to kitchen view
+        'wishes': special_wishes  
     })
 
     return jsonify(response.json()), response.status_code

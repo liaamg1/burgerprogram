@@ -15,13 +15,13 @@ def index():
 def receive_order():
     order_data = request.json  
     burger_name = order_data.get('name') 
-    special_wishes = order_data.get('wishes', '')  # Capture special wishes
+    special_wishes = order_data.get('wishes', '') 
 
     if burger_name:  
         # Append order as a dictionary containing burger name and wishes
         orders.append({'burger': burger_name, 'wishes': special_wishes})
     
-    return jsonify({'message': 'Order received'}), 200  # A simple response
+    return jsonify({'message': 'Order received'}), 200  
 
 # Route to display orders in the kitchen
 @app.route('/display-orders', methods=['GET'])
