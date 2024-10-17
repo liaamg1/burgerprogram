@@ -1,0 +1,18 @@
+---------------------------------------------------------------
+EngineerDiary – Burgerproject
+ProjectOverview
+
+Introduction:
+Teammembers: Ritvars Birovs, Hugo Jismark, Liam Gustafsson, Levin Bandrez, Måns Bäckström
+
+2024-09-20:
+Today i have created a simple project
+EXECUTED:
+•	Python installed
+•	Flask installed
+•	VS CODE will be my text editor, also used in other courses
+•	Tried to enter localhost:5000, with the simple message of: (“<h1>”Hello World</h1>”)
+Approximately 3 hours work
+Until next time:
+Next time I want to enter localhost:5000, I am not sure what the issue is of right now I might try to use another text editor,
+
