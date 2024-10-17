@@ -1,0 +1,72 @@
+Engineering Diary
+Leba19
+Team Members: Levin Bandrez, Liam Gustafsson, Måns Bäckström, Ritvars Birovs, Hugo Jismark
+__________________________________________________________________________________
+In the first week, we started by reading the assignment to understand it thoroughly.
+Our task was to develop a burger ordering system where users could place an order,
+customize their burgers, add items to a cart, change their order, or send it to the 
+kitchen via a kitchen client. We then chose Git to ensure smooth team collaboration. 
+I started by creating a Git account. At first I found the process difficult, especially 
+understanding Git commands. However, I quickly adapted and was able to get better at the platform. 
+The biggest challenge for me was getting used to Git, especially understanding how branches work. 
+These issues slowed me down. By the end of the week, I realized how important branches are for 
+effective change management. Additionally, we started thinking about the structure of the project 
+and how to organize tasks based on the strengths of team members. Over the next few days, 
+I spent a lot of time learning by watching videos. Once we fully understood the tasks, 
+we started communicating through platforms such as Snapchat, Discord, and meetings at school. 
+During these discussions, we divided the tasks. My task was to understand how a SQL database works, 
+with the goal of setting it up to process incoming orders. Over the next few weeks, we got familiar 
+with the technologies and worked with my team to build the project files. We decided to use two 
+containers: one for BurgerOrderer and one for KitchenView, each of which required its own Dockerfile.
+__________________________________________________________________________________
+I encountered several issues while programming. 
+In the first version of the code, I implemented a function called send_order() to send the 
+order to the kitchen view via two separate POST requests to the same endpoint. The first request 
+nly sent the name of the burger, while the second request included the name and ingredients. 
+However, I quickly realized that this approach was inefficient because only the second request would 
+be processed, resulting in unnecessary  calls to the server. Additionally, the frontend did not have the 
+functionality to handle special requests or custom ingredients.
+Recognizing the need for a redesign, I redesigned the process to send all the information (name and ingredients) 
+in a single request. This change not only simplified the code, but also provided more efficient and accurate 
+communication with the kitchen view.
+In the upcoming commit,  I turned my attention  to enhancing the functionality that enables users to personalize
+their burgers and indicate special requests. This necessitated modifications on both the backend and frontend. 
+For the frontend, I developed a dynamic list of checkboxes, which allows users to choose the ingredients they 
+wish to include in their burger. 
+I revised the JavaScript code to transmit both the chosen ingredients and any specific requests to the backend 
+upon order placement. Additionally, I adjusted the send_order() function on the backend to receive the ingredients 
+and special requests, subsequently relaying this information to the kitchen view.
+This commit addressed the shortcomings of the original version by merging all information into one POST request 
+and allowing complete customization for every order.
+__________________________________________________________________________________
+Collaboration:
+Using Git as our version control system enabled us to work at the same time on different 
+components of the project while avoiding conflicts in the codebase. Frequent meetings were 
+important for keeping the team togheter, ensuring everyone was aware of each other's progress,
+and addressing any issues as they came up. We created an environment with clear, open communication, 
+which allowed us to easily exchange ideas and tackle challenges collectively.
+__________________________________________________________________________________
+Configuration management:
+We maintained a consistent development environment using a requirements.txt file and a Dockerfile. 
+Git was essential for version control, helping us track changes, revert when needed, and avoid conflicts. 
+Over time, we improved our commit messages, making them more descriptive for better clarity. 
+Regular communication and feedback within the team strengthened collaboration and contributed to a positive work environment.
+__________________________________________________________________________________
+Testing and debugging:
+Throughout our process, testing and debugging played a critical role in ensuring 
+the system functioned as intended. We implemented continuous testing after each update to 
+quickly catch bugs and used VSCode’s built-in debugging tools to identify and resolve errors. 
+One challenge with the MySQL database, which led us to switch to PostgreSQL. This transition 
+improved functionality, and we resolved issues by watching instructional videos and adjusting 
+our Docker Compose configuration. After making this change, the system performed as expected.
+Initially, we chose MySQL from the start  as our database solution. but it wouldn’t connect or 
+return a value
+We specifically tested the communication between app.py and kitchen.py, implementing an "Order received" 
+response to ensure correct information transfer. During debugging, we discovered errors like using POST 
+instead of GET, which disrupted communication. After identifying and fixing this mistake, we restored proper 
+functionality.
+Some of the things I learned from this project is mainly how to work in a team and with people I have not 
+encountered before. I am also feeling a lot more confident now working with containers and databases. 
+
+(I documented the project in a regular document before i knew we should do it in guthub that is 
+why i hace copy and paste it into github)
