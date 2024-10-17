@@ -1,22 +1,32 @@
-Test och debuggning
-1.	Identifiera Funktionalitet
+------------------------------------------------------
+*** Test och debuggning ***
+
+
+** Identifiera Funktionalitet ** 
 Moduler att testa: App: API-ändpunkter för att hämta de olika burgarna 
 API-ändpunkt för att skicka beställningar Funktioner för att hantera anpassningar av beställningar App. 
 Databasens API för att hämta och lagra varuinformation KitchenView. 
 API-ändpunkt för att ta emot och visa beställningar 
 
-2.	Testmetoder
+------------------------------------------------------
+
+** Testmetoder **
 Tester att utföra: Enhetstester: Testa varje modul för att säkerställa att de returnerar korrekta värden. 
 Exempel: När en användare begär att beställa en hamburgare, bör API returnera en lista med tillgängliga hamburgare. 
 Integrationstester: Testa flödet mellan moduler från App till KitchenView. Exempel: När en beställning skickas, ska den dyka upp i KitchenView med korrekt information. 
 Felhanteringstester: Simulera felaktiga indata och se till att systemet hanterar dem korrekt. Exempel: Vad händer om en användare försöker beställa en icke-existerande vara? 
 
-3.	Testkörningar
+------------------------------------------------------
+
+
+** Testkörningar **
 Regelbunden testning: Kör testerna efter varje större funktionell ändring för att säkerställa att ingenting bryts. 
 Gjort cross-Browser test för att kontrollera hemsidan funktioner även fungerar på olika webbläsare. 
 Kört tester vi när vi gör comits för att se att inga nya buggar uppstår. 
 Vid testmisslyckande: När vi har fått problem så har diskuterat felet i teamet för att hitta lösningar som åtgärdar problemet. 
 Den här planen ger en bra översikt för hur vi strukturerat våra tester för att säkerställa att vår applikation är robust och fungerar som den ska!
+
+------------------------------------------------------
 
 
 
