@@ -1,0 +1,30 @@
+
+Teammedlemmar: Liam Gustafsson, Måns Bäckström, Ritvars Birovs, Hugo Jismark, Levin Bandrez.
+
+Sammarbete:
+Under projektets gång har samarbetet i teamet varit en av de mest givande aspekterna. 
+Vi har etablerat en öppen kommunikationslinje, vilket har gjort det lättare att dela idéer och lösa problem tillsammans. 
+Genom att använda Git som vårt versionshanteringssystem har vi kunnat arbeta parallellt på olika delar av projektet utan att skapa konflikter. 
+Regelbundna möten har också varit avgörande för att hålla alla informerade om varandras framsteg och för att diskutera eventuella hinder.
+Att kunna ge och få feedback har stärkt vår gruppdynamik och bidragit till en positiv arbetsmiljö.
+
+Kortfattat vad jag lärt mig under projektets gång:
+Under arbetet med projektet har jag haft en mycket lärorik och givande upplevelse. 
+Jag har fått möjlighet att fördjupa mig i flera olika aspekter av mjukvaruutveckling, inklusive databaser, API, HTML och Docker.
+
+Databas: Jag har lärt mig hur man designar och implementerar en databas för att lagra information om varutyper. 
+Genom att arbeta med databasen har jag fått en djupare förståelse för hur data struktureras och hur man effektivt hämtar information med hjälp av frågor.
+Detta var något väldigt nytt för mig men jag märker av att jag har fått en förståelse för koden och att
+
+API: Utvecklingen av API
+har också varit en central del av mitt lärande. Jag har fått praktisk erfarenhet av hur man bygger och konsumerar REST-API
+, vilket har gett mig en insikt i hur olika system kan kommunicera med varandra. Jag har lagt ner väldigt mycket tid på detta för att få vår uppgift att fungera.
+Detta var en utmaning då det var väldigt nytt för mig men tillslut så löste det sig.
+
+HTML: Jag har även arbetat med frontend-delen av projektet, där jag har skapat användargränssnittet med HTML. 
+Det har varit spännande att se hur man kan använda HTML för att skapa en interaktiv och användarvänlig upplevelse för kunderna.
+Dock har jag haft förkunskaper inom detta vilket underlättat på vägen.
+
+Docker: Slutligen har jag fått värdefull kunskap om Docker och hur man använder containrar för att skapa en isolerad utvecklingsmiljö. 
+Detta har gjort det möjligt för mig att förstå hur man kan paketera och distribuera applikationer på ett effektivt sätt.
+Detta är något jag har lagt ner väldigt mycket tid på, här har jag försökt förstå hur docker samt docker-compose fungerar, jag fick lägga mycket tid på docker-compose speciellt.
