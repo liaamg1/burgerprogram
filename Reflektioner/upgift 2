@@ -1,47 +1,35 @@
-------------------------------------------------------
+Implementation and Documentation
 
-*** Implementation och Dokumentation ***
+Project Overview
+The project involves building a simple restaurant ordering system where users can select and order burgers, while the kitchen can view and manage these orders. The system is divided into two containers:
 
-** Projektet i stort ** 
-Projektet handlar om att bygga en enkel restaurangbeställningssystem där användare kan välja och beställa hamburgare, samtidigt som köket kan se och hantera dessa beställningar. 
-Systemet är uppdelat i två containrar: 
-- Burger Order som hanterar kundens gränssnitt och beställningar
-- Kitchen View som visar aktuella beställningar till köket. 
-Genom att använda Flask som webbramverk och en PostgreSQL-databas för datalagring strävar vi efter en smidig och interaktiv användarupplevelse.
+Burger Order: Manages the customer interface and orders.
+Kitchen View: Displays current orders to the kitchen.
+By using Flask as the web framework and a PostgreSQL database for data storage, we aim for a smooth and interactive user experience.
+Burger Order
+The Burger Order container is responsible for displaying available burgers and receiving orders from customers. In this module, we have created routes to display burgers and accept orders via a POST request. It also retrieves burger data from a database. Here, we have implemented a method to add and remove ingredients, giving customers the flexibility to customize their orders.
 
+Kitchen View
+The Kitchen View container aims to provide kitchen staff with an overview of incoming orders. This module contains routes to receive orders and display current orders. With the help of Flask rendering, kitchen staff can easily view and manage orders in real-time. We have also implemented a responsive layout to ensure that information is presented clearly and understandably.
 
-** Burger Order ** 
-Containern Burger Order ansvarar för att visa tillgängliga hamburgare och ta emot beställningar från kunder. 
-I denna modul har vi skapat rutter för att visa hamburgare och ta emot beställningar via en POST-förfrågan. 
-Den hämtar också hamburgardata från en databas. Här har vi implementerat en metod för att lägga till och ta bort ingredienser, vilket ger kunderna flexibilitet att anpassa sina beställningar.
+Each Module
 
+app.py (Burger Order): The main module that handles all customer interactions, including retrieving burgers from the database and sending orders to the kitchen. Here, we also validate orders and communicate with the kitchen.
+burger_data.py: This module is responsible for interacting with the database, including creating, reading, and updating burger data. It also contains logic to ensure that only available burgers are displayed to customers.
+kitchen.py (Kitchen View): This module manages the logic for the kitchen interface, including receiving and displaying orders. It ensures that the kitchen is informed about new orders and enables an efficient workflow.
+HTML Files: These files contain the interface for both customers and kitchen staff. Each HTML file is designed to present relevant information in a user-friendly manner, using Flask templates for dynamic content.
+Experiences from Implementation
 
-** Kitchen View **
-Containern Kitchen View har som syfte att ge kökspersonalen en översikt av inkommande beställningar. 
-Denna modul innehåller rutter för att ta emot beställningar och visa aktuella ordrar. Med hjälp av Flask-rendering kan kökspersonalen enkelt se och hantera beställningar i realtid. 
-Vi har också implementerat en responsiv layout för att säkerställa att informationen presenteras på ett klart och tydligt sätt.
+What Went Well?
+All team members actively contributed, making it easier to maintain focus and maintaining our teamwork.
 
+What Went Less Well?
+Some features took longer to implement than expected, leading to adjustments in our timeline. 
+As example the database and docker-compose working togheter and on their own, this took much longer time than expected.
 
-** Varje modul **
-- app.py (Burger Order): Huvudmodulen som hanterar alla kundinteraktioner, inklusive att hämta hamburgare från databasen och skicka beställningar till köket. Här gör vi också validering av beställningar och kommunikation med köket.
-- burger_data.py: Modulen ansvarar för att interagera med databasen, inklusive att skapa, läsa och uppdatera hamburgardata. Den innehåller även logik för att säkerställa att endast tillgängliga hamburgare visas för kunder.
-- kitchen.py (Kitchen View): Denna modul hanterar logiken för kökets gränssnitt, inklusive att ta emot och visa beställningar. Den säkerställer att köket är informerat om nya beställningar och möjliggör en effektiv arbetsprocess.
-- HTML-filer: Dessa filer innehåller gränssnittet för både kunder och kökspersonal. Varje HTML-fil är designad för att presentera relevant information på ett användarvänligt sätt, med hjälp av Flask-mallar för dynamiskt innehåll.
+How Did We Solve Difficulties?
+Regular meetings to discuss progress and obstacles helped us identify problems early and keep the project on track.
 
-------------------------------------------------------
+What Did We Not Manage to Solve?
+We did not have enough time to implement all desired features, but we prioritized the most critical ones.
 
-*** Erfarenheter av Implementation ***
-
-** Vad gick bra? **
-Vår tydliga plan för struktureringen av komponenterna ledde till effektiv kodning. Alla teammedlemmar bidrog aktivt, vilket gjorde det enklare att hålla fokus.
-
-** Vad gick mindre bra? **
-Vissa funktioner tog längre tid att implementera än förväntat, vilket ledde till justeringar i vår tidsplan.
-
-** Hur löste vi svårigheterna? **
-Regelbundna möten för att diskutera framsteg och hinder hjälpte oss att identifiera problem tidigt och hålla projektet på rätt spår.
-
-** Vad lyckades vi inte lösa? **
-Vi hade inte tillräckligt med tid för att implementera alla önskade funktioner, men vi prioriterade de mest kritiska.
-
-------------------------------------------------------
