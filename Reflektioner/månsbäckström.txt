@@ -24,7 +24,7 @@ commit into the main branch when commiting a change.
 2024-10-13
 The problems from last update: 
 The problems from last update were easily fixed with:  if __name__ == '__main__':
-Since the last update I have gotten an understanding of Docker, html, Jinja2, SQLAlchemy, MySQL, API, GUI, DATABAS, GIT and GITHUB.
+Since the last update I have gotten a light understanding of Docker, html, Jinja2, SQLAlchemy, MySQL, API, GUI, DATABAS, GIT and GITHUB.
 EXECUTED:
 •	Docker installed
 •	MySQL installed
@@ -61,8 +61,18 @@ Until next time:
 We are having issues with the SQL, many hours go to watching informational videos that allow us to have a proper 
 database. At this moment we use SQLlite3 and we are having issues with it.
 
-
-
-
- 
-
+2024-10-15
+Today our group spoke with the teacher about our usage of SQLlite3, he couldn't help us because he didn't understand
+SQLlite3 wich prompted us to switch to MySQL. Me and Liam worked on the MySQL, while after what felt like one billion
+Error messages Liam got it to work on his machine however for some reason i get Error
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+I created error custom messages for Invalid URL and Internal Server Error,
+they make use of HTML to write out a Error code.
+EXECUTED
+•   MySQL-Workbench installed
+•   404.html, Invalid URL
+•   500.html, Internal Server Error
+Approximately 11 hours work
+Until next time:
+when i ran mysql --version, wich made me aware that it couldn't find path so i tried to go directly into path
+by entering Program Files but i couldn't enter.
