@@ -1,30 +1,99 @@
+Engineer Diary - Liam Gustafsson
+_____________________________________________________________________________________________
+Team Members: Liam Gustafsson, Måns Bäckström, Ritvars Birovs, Hugo Jismark, Levin Bandrez.
+_____________________________________________________________________________________________
+Collaboration:
+Throughout the project, collaboration within the team has been one of the most rewarding aspects. 
+We established an open line of communication, making it easier to share ideas and solve problems together. 
+By using Git as our version control system, we were able to work concurrently on different parts of the project without creating conflicts. 
+Regular meetings have also been crucial for keeping everyone informed about each other's progress and discussing any obstacles.
+ The ability to give and receive feedback has strengthened our group dynamic and contributed to a positive work environment.
 
-Teammedlemmar: Liam Gustafsson, Måns Bäckström, Ritvars Birovs, Hugo Jismark, Levin Bandrez.
+Configuration Management:
+Implementing configuration management has been a central part of our work. 
+By using Git, we could not only track changes but also revert to previous versions when needed. 
+We have used meaningful commit messages to document our work. 
+However, I would say we improved our commit messages over time; initially, they were a bit shorter, but they became more descriptive as we progressed. 
+This has allowed us to quickly identify when and why changes were made.
 
-Sammarbete:
-Under projektets gång har samarbetet i teamet varit en av de mest givande aspekterna. 
-Vi har etablerat en öppen kommunikationslinje, vilket har gjort det lättare att dela idéer och lösa problem tillsammans. 
-Genom att använda Git som vårt versionshanteringssystem har vi kunnat arbeta parallellt på olika delar av projektet utan att skapa konflikter. 
-Regelbundna möten har också varit avgörande för att hålla alla informerade om varandras framsteg och för att diskutera eventuella hinder.
-Att kunna ge och få feedback har stärkt vår gruppdynamik och bidragit till en positiv arbetsmiljö.
+Implementation and documentation:
+The implementation of the project has been a learning process. 
+I have worked on both the backend and frontend, giving me a comprehensive understanding of how the system functions. 
+By creating APIs, I learned how different components interact and how to structure data flow. 
+I also became aware of the importance of documenting code to ensure that the project is easy to maintain and further develop. 
+I could have been more consistent with documenting the code, but my primary focus was on solving the problems at hand.
+ Nonetheless, We developed a plan regarding the responsibilities, I worked on mine and successfully executed that plan, which yielded positive results.
 
-Kortfattat vad jag lärt mig under projektets gång:
-Under arbetet med projektet har jag haft en mycket lärorik och givande upplevelse. 
-Jag har fått möjlighet att fördjupa mig i flera olika aspekter av mjukvaruutveckling, inklusive databaser, API, HTML och Docker.
+Testing and Debugging:
+Testing has been a central part of our development process, and we chose to test the code after every update to ensure we always achieve the correct results.
+ By implementing continuous testing, we could catch bugs and issues early, which has been crucial for maintaining the quality of our work. 
+ This is easily done in Python using VSCode, as running the code will show any errors or bugs in the terminal, making it straightforward to keep track of and resolve these issues.
 
-Databas: Jag har lärt mig hur man designar och implementerar en databas för att lagra information om varutyper. 
-Genom att arbeta med databasen har jag fått en djupare förståelse för hur data struktureras och hur man effektivt hämtar information med hjälp av frågor.
-Detta var något väldigt nytt för mig men jag märker av att jag har fått en förståelse för koden och att
+One specific problem we encountered was with the MySQL database and Docker Compose.
+ Consequently, we decided to switch to PostgreSQL. After this change, the code functioned as we intended.
 
-API: Utvecklingen av API
-har också varit en central del av mitt lärande. Jag har fått praktisk erfarenhet av hur man bygger och konsumerar REST-API
-, vilket har gett mig en insikt i hur olika system kan kommunicera med varandra. Jag har lagt ner väldigt mycket tid på detta för att få vår uppgift att fungera.
-Detta var en utmaning då det var väldigt nytt för mig men tillslut så löste det sig.
+I have tested various scenarios and debugged by specifically checking the code in app.py, which sends information to kitchen.py. 
+In kitchen.py, I implemented an "Order received" response that would be triggered when it received information from app.py. 
+Since we had previous issues with the database, I used some temporary burgers during these tests and worked on the code until I eventually got a response.
 
-HTML: Jag har även arbetat med frontend-delen av projektet, där jag har skapat användargränssnittet med HTML. 
-Det har varit spännande att se hur man kan använda HTML för att skapa en interaktiv och användarvänlig upplevelse för kunderna.
-Dock har jag haft förkunskaper inom detta vilket underlättat på vägen.
+There were several problems, including an instance where I mistakenly wrote POST in app.py when it should have been GET for kitchen.py. 
+This incorrect method resulted in information not being sent or received correctly, breaking communication between the two files. 
+By identifying and correcting this error, I was able to restore the intended functionality and ensure that kitchen.py received the information as expected. 
+This example illustrates the importance of debugging for solving problems and improving code functionality.
+ By carefully testing and troubleshooting step by step, I have ensured that the system operates as it should.
 
-Docker: Slutligen har jag fått värdefull kunskap om Docker och hur man använder containrar för att skapa en isolerad utvecklingsmiljö. 
-Detta har gjort det möjligt för mig att förstå hur man kan paketera och distribuera applikationer på ett effektivt sätt.
-Detta är något jag har lagt ner väldigt mycket tid på, här har jag försökt förstå hur docker samt docker-compose fungerar, jag fick lägga mycket tid på docker-compose speciellt.
+I also applied similar testing for the SQL database. 
+I initially added a print statement just to verify that the database could access the burgers, determining 
+whether the issue lay with the database or in the communication between the database and the code that displayed the burgers. 
+I found that the code itself was correct, but that connecting to the "local Docker MySQL database" was problematic. 
+Therefore, we opted to switch to PostgreSQL. 
+After this change and watching a few instructional videos on how it worked, I could implement it in Docker Compose, after which the code functioned as we wanted.
+
+Summary of What I Learned During the Project:
+Working on this project has been an incredibly educational and rewarding experience.
+ I had the opportunity to delve into various aspects of software development, including databases, APIs, HTML, and Docker.
+
+Database:
+I learned how to design and implement a database to store information about product types. 
+Working with the database has given me a deeper understanding of how data is structured and how to efficiently retrieve information using queries. 
+This was something very new to me, but I can see that I have gained a solid understanding of the code.
+
+API:
+The development of APIs has also been a central part of my learning. 
+I gained practical experience in building and consuming REST APIs, which provided insight into how different systems can communicate with each other. 
+I invested a lot of time in this to make our task functional. This was a challenge since it was quite new to me, but eventually, it all fell into place.
+
+HTML:
+I also worked on the frontend part of the project, where I created the user interface with HTML. 
+It has been exciting to see how HTML can be used to create an interactive and user-friendly experience for customers. 
+However, I had some prior knowledge in this area, which made it easier.
+
+Docker:
+Lastly, I gained valuable knowledge about Docker and how to use containers to create an isolated development environment. 
+This has enabled me to understand how to package and distribute applications efficiently. 
+I spent a lot of time trying to grasp how Docker and Docker Compose work, especially focusing on Docker Compose.
+
+My Commits:
+I made a substantial number of commits, which reflects the significant amount of time I dedicated to the task. 
+I had to work on virtually every part of the project. It would be too lengthy to describe each commit in detail, so I will provide an overview instead.
+
+It all began with a base code where both HTML and Python were mixed, which I found quite complicated and made it much harder to read and understand. 
+Therefore, Måns and I decided to rewrite parts of this code. For instance, we kept the database and some other small elements.
+
+We restructured the code so that HTML and Python were separated. 
+This way, the code became much more organized and easier to work with.
+A lot of time was spent on problem-solving, trying to understand the underlying causes of these issues, and ultimately implementing new solutions.
+After many iterations, the code was nearly complete.
+
+In addition to all the commits I made, I spent a considerable amount of time conducting research from various sources such as YouTube, Google, and so forth. 
+The most challenging aspect of all these commits was ensuring that everything worked together cohesively. 
+I had dedicated a lot of time to making the code functional, but the real challenge came when everything needed to work simultaneously. 
+Ultimately, everything fell into place. Due to the amount of time Ive put into this project has lead to me making many commits.
+
+Reflections and Opportunities for Improvement:
+As we reflect on our progress, we recognize areas where we can improve. 
+Better documentation practices throughout the project would enhance future maintainability. 
+Additionally, refining our testing strategies could lead to even more robust solutions. 
+Continuous feedback loops among team members can also help identify challenges sooner and foster greater collaboration.
+More research earlier on, rather than researching when it is "time to write".
+As I said before, making more structured commit messages, which we did towards the end.
