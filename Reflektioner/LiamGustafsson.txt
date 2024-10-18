@@ -72,6 +72,7 @@ Docker:
 Lastly, I gained valuable knowledge about Docker and how to use containers to create an isolated development environment. 
 This has enabled me to understand how to package and distribute applications efficiently. 
 I spent a lot of time trying to grasp how Docker and Docker Compose work, especially focusing on Docker Compose.
+Here I learned a lot of commands such as: docker ps, docker down, docker compose up --build, docker compose logs, etc.
 
 My Commits:
 I made a substantial number of commits, which reflects the significant amount of time I dedicated to the task. 
@@ -84,11 +85,18 @@ We restructured the code so that HTML and Python were separated.
 This way, the code became much more organized and easier to work with.
 A lot of time was spent on problem-solving, trying to understand the underlying causes of these issues, and ultimately implementing new solutions.
 After many iterations, the code was nearly complete.
+Some of the criterias that my commits covered were: HTML, both endpoints of the API, Database, Docker and a lot of problem testing.
+So it is safe to say that I have put down a hefty amount of time on this project, been an active part of the group, helping my co-workers in the group.
+Something that i also have learned during this project is that there always is a solution to the problems occuring, you just have to find that solution.
+And during this course, my problem solving skills regarding code have improved drastically, because it has been my own duty to make everything work, and to not rely on for example my teacher.
+So it has been very giving, and I would definetely recommend this course to others!
 
 In addition to all the commits I made, I spent a considerable amount of time conducting research from various sources such as YouTube, Google, and so forth. 
 The most challenging aspect of all these commits was ensuring that everything worked together cohesively. 
 I had dedicated a lot of time to making the code functional, but the real challenge came when everything needed to work simultaneously. 
 Ultimately, everything fell into place. Due to the amount of time Ive put into this project has lead to me making many commits.
+So in conclusion, my commits covered many parts of the project with testing the code, fixing the problems and trying to get everything to work.
+I would say that I am very happy with my commitment in the group, and that I have learned a lot!
 
 Reflections and Opportunities for Improvement:
 As we reflect on our progress, we recognize areas where we can improve. 
@@ -97,3 +105,6 @@ Additionally, refining our testing strategies could lead to even more robust sol
 Continuous feedback loops among team members can also help identify challenges sooner and foster greater collaboration.
 More research earlier on, rather than researching when it is "time to write".
 As I said before, making more structured commit messages, which we did towards the end.
+
+I completely missed the fact that this should have been written in the github project, so i updated this text in a normal document, but when i realised i copy pasted my text into here, and wrote and added more.
+Hope you like our project!

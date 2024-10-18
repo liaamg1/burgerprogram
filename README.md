@@ -9,7 +9,7 @@ This repository contains the work of a student team project developed by:
 - Hugo Jismark
 - Liam Gustafsson
 - Levin Bandrez
-- Måns Bäckströ
+- Måns Bäckström
   
 This project aims to build a simple "burger" application, focusing on collaboration and version control using Git and GitHub. The objective is to gain practical experience in software development workflows, including creating branches, handling pull requests and managing code quality.
 
@@ -20,6 +20,8 @@ This project aims to build a simple "burger" application, focusing on collaborat
 The goal of this project is to deepen our understanding of software collaboration and version control practices. By using GitHub, we learned how to work efficiently with repositories, commits, pushes, pulls, and merges. Additionally, we gained experience in various programming languages and learnt how to deal with code quality, teamwork and communication.
 
 -----------------------------------------------------------
+**Start the program**
+To start the program, use the command: docker compose up --build.
 
 ** Workflow ** 
 
