@@ -97,3 +97,6 @@ Additionally, refining our testing strategies could lead to even more robust sol
 Continuous feedback loops among team members can also help identify challenges sooner and foster greater collaboration.
 More research earlier on, rather than researching when it is "time to write".
 As I said before, making more structured commit messages, which we did towards the end.
+
+I completely missed the fact that this should have been written in the github project, so i updated this text in a normal document, but when i realised i copy pasted my text into here, and wrote and added more.
+Hope you like our project!
