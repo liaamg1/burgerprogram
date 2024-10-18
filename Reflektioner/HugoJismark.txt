@@ -1,1 +1,53 @@
+Engineering Diary – Burger Project
+Hugo Jismark
+_____________________________________________________________________________________________________________________________________________________
+Team Members: Ritvars Birovs, Hugo Jismark, Liam Gustafsson, Levin Bandrez, Måns Bäckström.
+
+Our team collaborated to develop a burger application, focusing on backend, frontend, and database integration. The project emphasized practical experience with the goal of improving teamwork, code quality, and communication.
+_____________________________________________________________________________________________________________________________________________________
+Objective
+The main goal was to develop practical skills in collaboration, version control and software development processes. We used GitHub for repository management and learned how to handle branching, commits, merging, and pull requests. In addition to version control, we gained experience in coding across various languages, emphasizing collaboration.
+
+1.  Repository Creation
+We set up a GitHub repository and used a branching strategy to allow independent feature development and reduce merge conflicts.
+
+2.  Planning and Collaboration
+Project structure and tasks were planned using OneNote, with clear role assignments. Communication was maintained via Snapchat/Discord for updates and problem-solving.
+
+3.  Implementation and Coding
+Tasks were divided into modules. Each member worked on separate branches, making pull requests for code review before merging into the main branch. We adhered to Python’s PEP8 for consistent code quality. Testing was done after each commit to ensure code stability.
+
+4.  Configuration Management
+A requirements.txt file maintained consistent dependencies. Docker was used for containerization, ensuring the same environment across all developers. We switched from MySQL and SQLite to PostgreSQL for better compatibility.
+
+5.  Testing and Debugging
+Debugging and unit tests were implemented, particularly for app.py and database functions. We addressed issues like order storage and data retrieval. Early testing practices would have helped catch bugs sooner.
+
+6.  Final Code and Delivery
+After thorough testing, code reviews, and debugging, we ensured that all functions worked as expected before finalizing the project.
+_____________________________________________________________________________________________________________________________________________________
+
+Reflections and Conclusions
+
+Challenges
+Communication and careful commit handling were essential to prevent code loss or overwriting. At the beginning we had problems regarding deciding which programming language to use and that hindered us from getting started. 
+
+Learnings
+We learned the importance of clear commit messages and frequent pushes to avoid large conflicts. We also recognized the value of working in separate branches and using pull requests for peer review. Good communication and collaboration were vital for solving problems and moving forward.
+
+Suggestions for Improvement
+Future projects could benefit from earlier code reviews and more automated testing. Improved communication, especially when discussing recent changes and challenges, would also help.
+Overall, we gained a deeper understanding of version control and collaboration through GitHub and Git, which allowed us to manage code effectively while working in parallel.
+_____________________________________________________________________________________________________________________________________________________
+My Commits and Contributions
+I contributed to both the planning and coding phases of the project. Initially, I worked on the database, searching google and youtube to find information regarding how a database works and how to program one. It took some time, but I managed to program a working database that we ended up using, although we moved it from the file, that I had committed it to. I also tried to help my teammates when they ran into problems by providing ideas and doing research on how to solve the problem. I also worked with debugging and testing, which went well, but we could have done a better job from the beginning regarding the documentation. 
+
+Areas of Contribution
+Database: I contributed to database coding, setup and testing, initially working with MySQL and SQLite before switching to PostgreSQL after compatibility issues.
+Debugging and testing: I played a role in debugging and testing the code. This included identifying and fixing issues both in the database and app.py and then we collaborated on how to solve the problem as a team. 
+_____________________________________________________________________________________________________________________________________________________
+Reflections on My Role
+Throughout the project, I worked both on the backend and frontend, gaining valuable experience in both areas. I learned how to work within a team, structure planning, and use Docker for containerization. By the end of the project, I was more comfortable with debugging, researching new tools, and ensuring high-quality code. When we started this project, I was completely new to coding and had no clue about what went in to making a program like this. But as the project moved along, I have expanded my knowledgebase and it’s a big contrast if you compare now to when we started. 
+
+
 
