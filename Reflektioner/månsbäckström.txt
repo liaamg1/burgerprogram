@@ -89,6 +89,7 @@ I do understand that the problem is the SQL because when getting this error i ha
 the database itself. But this did not work for me and we decided to use postgreSQL instead of MySQL.
 EXECUTED:
 •   psycopg2 installed
+Approximately 8 hours work
 psycopg2 solved Error:
 mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
 
