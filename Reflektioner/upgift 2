@@ -1,13 +1,17 @@
 Implementation and Documentation
 
 Project Overview
-The project involves building a simple restaurant ordering system where users can select and order burgers, while the kitchen can view and manage these orders. The system is divided into two containers:
+The project involves building a simple restaurant ordering system where users can select and order burgers, while the kitchen can view and manage these orders. 
+To run the entire program you jsut have to write "docker compose up --build" in the terminal.
+The system is divided into two containers:
 
 Burger Order: Manages the customer interface and orders.
 Kitchen View: Displays current orders to the kitchen.
 By using Flask as the web framework and a PostgreSQL database for data storage, we aim for a smooth and interactive user experience.
 Burger Order
-The Burger Order container is responsible for displaying available burgers and receiving orders from customers. In this module, we have created routes to display burgers and accept orders via a POST request. It also retrieves burger data from a database. Here, we have implemented a method to add and remove ingredients, giving customers the flexibility to customize their orders.
+The Burger Order container is responsible for displaying available burgers and receiving orders from customers. In this module, we have created routes to display burgers and accept orders via a POST request. 
+It also retrieves burger data from a database.
+Here, we have implemented a method to add and remove ingredients, with a simple text box for special whishes, giving customers the flexibility to customize their orders.
 
 Kitchen View
 The Kitchen View container aims to provide kitchen staff with an overview of incoming orders. This module contains routes to receive orders and display current orders. With the help of Flask rendering, kitchen staff can easily view and manage orders in real-time. We have also implemented a responsive layout to ensure that information is presented clearly and understandably.
@@ -26,6 +30,8 @@ All team members actively contributed, making it easier to maintain focus and ma
 What Went Less Well?
 Some features took longer to implement than expected, leading to adjustments in our timeline. 
 As example the database and docker-compose working togheter and on their own, this took much longer time than expected.
+We could have decided on a more stable database from the beggining, because we had originally started with SQLlite.
+So for the projects in the future, planning more could be an improvment, you can never plan enough!
 
 How Did We Solve Difficulties?
 Regular meetings to discuss progress and obstacles helped us identify problems early and keep the project on track.
