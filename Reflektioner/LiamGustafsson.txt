@@ -89,6 +89,8 @@ In addition to all the commits I made, I spent a considerable amount of time con
 The most challenging aspect of all these commits was ensuring that everything worked together cohesively. 
 I had dedicated a lot of time to making the code functional, but the real challenge came when everything needed to work simultaneously. 
 Ultimately, everything fell into place. Due to the amount of time Ive put into this project has lead to me making many commits.
+So in conclusion, my commits covered many parts of the project with testing the code, fixing the problems and trying to get everything to work.
+I would say that I am very happy with my commitment in the group, and that I have learned a lot!
 
 Reflections and Opportunities for Improvement:
 As we reflect on our progress, we recognize areas where we can improve. 
