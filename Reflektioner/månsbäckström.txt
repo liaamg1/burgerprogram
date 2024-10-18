@@ -63,7 +63,7 @@ database. At this moment we use SQLlite3 and we are having issues with it.
 
 2024-10-15
 Today our group spoke with the teacher about our usage of SQLlite3, he couldn't help us because he didn't understand
-SQLlite3 wich prompted us to switch to MySQL. Me and Liam worked on the MySQL, while after what felt like one billion
+SQLlite3 wich prompted us to switch to MySQL. Me and Liam worked on the MySQL, after what felt like one billion
 Error messages Liam got it to work on his machine however for some reason i get Error
 mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
 I created error custom messages for Invalid URL and Internal Server Error,
@@ -76,3 +76,17 @@ Approximately 11 hours work
 Until next time:
 when i ran mysql --version, wich made me aware that it couldn't find path so i tried to go directly into path
 by entering Program Files but i couldn't enter.
+
+2024-10-16
+Problem since last update: to enter the Program Files I just put "Program Files", once entered I found MySQL 
+and did the command 'mysql --version', it did find the files but the Error:
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+still popped up. I believe the Error has to do something with mysql-connector. I tried to fix this issue 
+by installing and uninstalling, mysql-connector, mysql-connector-python and mysql-connector-python rf.
+I tried to use them all individually and in diffrent orders but i could not get rid of Error: 
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
+I do understand it is a local thing and after a while of this not working me and Liam decided to use postgreSQL,
+EXECUTED:
+•   psycopg2 installed
+psycopg2 solved Error:
+mysql.connector.errors.NotSupportedError: Authentication plugin 'caching_sha2_password' is not supported
