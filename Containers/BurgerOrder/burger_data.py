@@ -1,7 +1,18 @@
+"""
+This module connects to a PostgreSQL database to 
+manage burger data for a burger ordering system.
+It contains functions to establish a database connection 
+and retrieve burger details, ensuring 
+only predefined burgers are present in the database.
+"""
+
 import psycopg2
 
 #Function to get a database connection
 def get_db_connection():
+    """
+    Establishes and returns a connection to the PostgreSQL database.
+    """
     return psycopg2.connect(
         host="db",
         user="postgres",  
@@ -11,6 +22,13 @@ def get_db_connection():
 
 #Function to get burgers from the database
 def get_burgers():
+    """
+    Fetches the list of burgers from the database, ensuring only 
+    predefined burgers are present. Creates the burgers table if it 
+    doesn't exist, clears existing burgers, and inserts specific 
+    burgers if they do not already exist.
+    """
+
     db_connection = get_db_connection()
     cursor = db_connection.cursor()
 

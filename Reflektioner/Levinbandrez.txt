@@ -19,7 +19,7 @@ with the goal of setting it up to process incoming orders. Over the next few wee
 with the technologies and worked with my team to build the project files. We decided to use two 
 containers: one for BurgerOrderer and one for KitchenView, each of which required its own Dockerfile.
 __________________________________________________________________________________
-I encountered several issues while programming. 
+I encountered several issues while coding. 
 In the first version of the code, I implemented a function called send_order() to send the 
 order to the kitchen view via two separate POST requests to the same endpoint. The first request 
 nly sent the name of the burger, while the second request included the name and ingredients. 
