@@ -4,6 +4,10 @@ import requests
 
 app = Flask(__name__)
 
+# TEST
+def add(x, y=2):
+    return x + y
+
 # Frontpage route
 @app.route('/')
 def frontpage():
