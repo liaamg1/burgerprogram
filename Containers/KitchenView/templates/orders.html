@@ -1,19 +1,21 @@
+<!-- orders.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders</title>
+    <title>Received Orders</title>
 </head>
 <body>
     <h1>Received Orders</h1>
     <ul>
-        {% for order in orders %}
-        <li>
-            <strong>Burger:</strong> {{ order.burger }} 
-            {% if order.wishes %} - <strong>Special Wishes:</strong> {{ order.wishes }} {% endif %}
-        </li>
-        {% endfor %}
+        {% if orders %}
+            {% for order in orders %}
+                <li>{{ order.burger }} - {{ order.wishes }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No orders available</li>  <!-- Message for no orders -->
+        {% endif %}
     </ul>
     <a href="/">Back to Home</a>
 </body>
