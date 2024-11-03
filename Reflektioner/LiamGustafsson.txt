@@ -108,3 +108,35 @@ As I said before, making more structured commit messages, which we did towards t
 
 I completely missed the fact that this should have been written in the github project, so i updated this text in a normal document, but when i realised i copy pasted my text into here, and wrote and added more.
 Hope you like our project!
+
+Komplettering:
+1. Selected Functionality
+I chose to test the function for retrieving and displaying a list of burgers by calling the /order route. 
+I had to temporarily add burgers instead of using the database, as the database runs when I execute docker-compose.
+
+2. Setting Breakpoints
+I set breakpoints in the following parts of the code:
+
+In the display_burgers function, right before the call to get_burgers().
+When rendering burgers.html, so that I could inspect the value of burgers.
+3. Using the Debugger
+Continue: I used this button to continue execution to the next breakpoint.
+Step Over: This button allowed me to execute the current line without stepping into functions.
+Step Into: I used it to go into the called function.
+Step Out: This button helped me exit the current function and return.
+4. Monitoring Variables
+To monitor a variable, I right-clicked on it in the debug view and selected "Watch." 
+At the breakpoint, I could see the value of burgers (for example, a list of burger names). 
+I monitored the value to see if it changed as I interacted with the code.
+
+5. Trying Different Paths
+When I ordered a different burger, it affected how the code executed in the send_order() function. 
+The monitored variables burger_name and special_wishes received new values based on my order.
+
+Summary and Reflection
+What went well?: I managed to set breakpoints and navigate the code without issues.
+What went less well?: I initially had some difficulty understanding how to monitor variables.
+What was easy?: It was straightforward to follow the flow of functions in the code.
+What was difficult?: Replacing database logic with temporary data for testing was a challenge.
+Can debugging be a useful tool for me?: Absolutely, it is essential for understanding and resolving issues in the code.
+The result of the entire debugging session was that burgers received the correct value (which was that it contained the burgers as "value").
