@@ -134,8 +134,8 @@ When I had fully ran the program using the debugg feature 'order' had 'get' its 
 4. Trial and error
 I had never used breakpoints before so when starting out I was just playing around with it. I did so by creating simple code,
 for example a=200, b=33, b>a and b<a. This is how I started to see how the test and debugg feature reacts to right and
-wrongs. And this is also how I learnt how to use the WATCH feature. When I felt ready I entered our group project
-to try it out.
+wrongs. And this is also how I learnt how to use the WATCH feature. I also learnt continue, step over, step into and
+step out. When I felt ready I entered our group project to try it out.
 
 It didn't take long before I ran into a problem, infact it happend right away. When trying to debugg kitchen.py it couldn't 
 find path but after using all my brain power I realised I was in the wrong environment in the debugger used for this project
