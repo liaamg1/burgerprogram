@@ -99,3 +99,56 @@ Reflections and Opportunities for Improvement:
 This task feels very easy to do until you try to do something. This is a iceberg task because with every minor change
 100 videos have to follow. If we did it all again THE priority would be to set up Git wich we did. And secondly 
 making sure the structure works before writing a bunch of code wich we could have done better.
+
+--------------
+Komplettering:
+1. Selected function to debugg
+I chose to test the function; 'def receive_order' in kitchen.py. 
+I had to temporarily add a dictionary with burgers instead of using the database, as the database doesn't run when debugging.
+
+2. Setting breakpoints
+I set breakpoints in the following parts of the code (in kitchen.py):
+variable: 'order'; order is a empty list that will eventually append the values from burger_name and special_wishes.
+
+variable: 'burger_name'; burger_name uses the get command to access order_data with the key 'name', when doing so it
+will access my temporarily constructed dictionary in order_data and get a value
+
+variable: 'special_wishes'; special_wishes uses the get command to access order_data with the key 'wishes', when doing so it
+will access my temporarily constructed dictionary in order_data and get a value
+
+variable: 'order_data'; order_data is the variable that usually recieve the rest call from the API, this information 
+contains names of the burgers and the wishes the user has added when ordering. Considering the API can't access
+the database I added a dictionary to order_data instead of its original use.
+
+3. Monitoring variables
+Monitering the variables was frustrating and exciting because when you put variables on 'WATCH' in the run and debugg 
+feature you can actively see the variables change. It's exciting when they aquire a value and frustrating when they don't.
+'order' always had a value because it was given the value empty list ([]) in the very beginning of kitchen.py. 'order' is 
+empty because it is expected to retrieve values further down the code. These values come from the variables 
+burger_name and special_wishes wich i also had on watch. The reasoning for having these variables on watch is because
+I wanted to make sure their keys weren't misspelled or something other that would restrict these variables from retrieving
+the values from the temporarily constructed dictionary, 'order_data'. 
+
+When I had fully ran the program using the debugg feature 'order' had 'get' its values and was now visable on localhost.
+
+4. Trial and error
+I had never used breakpoints before so when starting out I was just playing around with it. I did so by creating simple code,
+for example a=200, b=33, b>a and b<a. This is how I started to see how the test and debugg feature reacts to right and
+wrongs. And this is also how I learnt how to use the WATCH feature. When I felt ready I entered our group project
+to try it out.
+
+It didn't take long before I ran into a problem, infact it happend right away. When trying to debugg kitchen.py it couldn't 
+find path but after using all my brain power I realised I was in the wrong environment in the debugger used for this project
+(launch.json). This was because Liam had created this debugger the day prior for his use and when I tried to use it, it wouldn't
+work because Liam used it in containers/burgerorder/app.py meanwhile I wanted to use it in containers/kitchenview/kitchen.py.
+
+Now I was ready to debugg and after issues with order_data and how to best use it I decided to create a temporary dictionary.
+Bassicly it is what the REST API CALL would send over in docker-compose. This way I limit the testing to the KitchenView 
+folder. This allows me to test 'def recieve_order' and to see how it's variables operate actively and then to finnaly see
+the end result that I wanted wich was to view the value in localhost.
+
+5. Summary and reflection
+I did achieve my goal with my debugg session. I could have spent less time if I had the correct path right away and didn't
+bother with the functions from other files. Even though it was frustrating not having these work for me I can now confidently
+say that in retrospect I don't mind spending the extra time figuring out these problems because of how I have learnt from
+trial and error.

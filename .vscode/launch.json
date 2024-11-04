@@ -7,7 +7,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "containers.burgerorder.app",  // Path to your app
+                "FLASK_APP": "Containers.KitchenView.kitchen",  // Path to your app
                 "FLASK_DEBUG": "1",
                 "PYTHONPATH": "containers"  // Add this line
             },
