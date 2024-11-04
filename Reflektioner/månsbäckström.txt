@@ -147,8 +147,8 @@ Bassicly it is what the REST API CALL would send over in docker-compose. This wa
 folder. This allows me to test 'def recieve_order' and to see how it's variables operate actively and then to finnaly see
 the end result that I wanted wich was to view the value in localhost.
 
-5. Summary and reflection
+5. Reflection
 I did achieve my goal with my debugg session. I could have spent less time if I had the correct path right away and didn't
 bother with the functions from other files. Even though it was frustrating not having these work for me I can now confidently
-say that in retrospect I don't mind spending the extra time figuring out these problems because of how I have learnt from
-trial and error.
+say that in retrospect I don't mind spending the extra time figuring out these problems because of how much I have learnt 
+through trial and error.
