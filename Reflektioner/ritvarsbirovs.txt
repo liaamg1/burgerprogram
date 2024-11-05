@@ -62,7 +62,7 @@ Through this project, we gained a deeper understanding of version control and co
 
 -------------------------------------------------------
 
-* My Commits and What I Contributed* 
+* My Commits and What I Contributed * 
 
 I participated in both the coding and the planning, where I created our roles and set up the planning in OneNote. I made a few commits where I created the base code we worked from and attempted to connect kitchen.py to app.py and connect the database to the app after it was created. I also helped my team members when they encountered problems or had questions.
 I started with the base code having both python and HTML code inside of app.py just to make a base-code to go from and later due to many problems we encountered during debugging Måns and Liam decided to split up HTML and Python to make the code more readable and easier to work with. I started off by doing loads of commits to give the group a good start but we shortly decided to change the base code and work from there due to the complexity from having both python and HTML code in one file. During the end i mostly helped out with ideas and research for the group so they could implement their code and also after the code was done, i did my best checking the code for small errors and also did the commenting throughout the code. I checked for pep8 standard stuff such as too long lines or Naming Conventions etc.
@@ -79,3 +79,17 @@ Docker - I had zero experience with docker so a lot of research went into unders
 Database - I had some prior experience from school, so i did my best to use different types of databases such as MySQL and SQLite to make the order program to work, however due to problems with the connection we decided to use PostgreSQL where i had to research a lot to be as useful to the team as possible.
 
 I learned how to work more within a team and how to structure planning, as well as how to work with containers and databases.
+
+-------------------------------------------------------
+
+* Komplettering * 
+
+Selected functionality: I focused on testing the integration between the main order page and the kitchen view, especially ensuring that orders placed on the main page were sent to kitchenView. I needed to verify thta the kitchen view recieved all values such as: burger name, quantity and special instructions. 
+
+Set breakpoints: I set breakpoints to inspect how data was moved from main order page to the kitchen view. In the "send_order()" function on the main page, right before the data was packaged and sent to kitchen view. This allowed me to confirm that each orders details (burger name, quantity, special instructions) were gathered correctly. In the "kitchen_view()" function to check the incoming data and confirm that the kitchen recieved all necassary values without data loss or format errors. Before rendering "kitchen.html" to verify that the data structure was correct and inspect the values before displaying them. 
+
+Using the debugger: I used the button "continue"  to execute the row going towards the breakpoint. the button "Step-over" allowed me to test the current line without entering into functions. The button "Step-into" was used to go into the called function. And the last button was "Step-out" which i used to exit the current function and return back into the regular.
+
+Monitoring variables: I clicked in the debug view and selected "Watch". At each line and breakpoint i could see the values that got sent through aswell as see what didnt get through to easily see what problems occured. I could monitor the values whilst i changed some parts with the code aswell.
+
+Inspecting data transfer: At each breakpoint i inspected the data structure to confirm that values moved correctly between views. in "send_order()" i confirmed that all order details were bundled and sent as expected. In "Kitchen_view()" i verified that the incoming data matched the expected structure and contained all fields.
