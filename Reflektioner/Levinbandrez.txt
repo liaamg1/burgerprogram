@@ -70,3 +70,37 @@ encountered before. I am also feeling a lot more confident now working with cont
 
 (I documented the project in a regular document before i knew we should do it in guthub that is 
 why i hace copy and paste it into github)
+
+Kompletering
+I choose to debug the function get_burgers in burger_data.py, wich creates and fills a table with burgers
+in database, then after that returns a list od these burgers.
+I set breakpoints at these parts of the function to track the flow and variable values:
+db_connection = get_db_connection() to ensure the database connection is created.
+cursor.execute(create_table_query) to verify the table is created.
+cursor.execute(insert_burgers_query) to check if four specific burgers are added.
+I used continue to move to the next breakpoint, Step over to skip lines without entering functions. 
+Step into for step into a function.
+And step out to exit back to the mein function when i am done. 
+
+I tracked the variable burger_list to see its value in real time, it is an empty list until burgers adds. The debugg
+lets me see when burger_list updates after cursor.fetchall() fetches data.
+
+I tested a few ways to run the function. When running the function as usual, the burger_list variable contains the 
+expected four burgers, confirming that the function performs as intended under standard conditions. Running the function 
+with an empty "burgers" table shows that it can successfully create and populate the table without any issues, which 
+demonstrates the function’s reliability when dealing with a new or reset database. Finally, by modifying the insert_burgers_query 
+to include a vegetarian burger, we can verify that the function correctly handles the is_vegetarian attribute, 
+ensuring that this new detail is properly managed in the returned data.
+he code behaves differently depending on whether the table is empty or already has burgers. 
+If burgers exist, the DELETE FROM burgers command ensures only the specific burgers are kept. 
+The value of burger_list depends on whether new burgers are added or the table is empty.
+
+In summary, the debugging process went smoothly overall. Setting breakpoints and tracking 
+changes in burger_list was straightforward, making it easy to follow the function's behavior. 
+However, there were some challenges, particularly with occasional database connection errors, 
+which made get_db_connection tricky to manage at times. Tracking variable changes was simple 
+and efficient thanks to the debug tools, which provided real-time updates on values. 
+Testing different paths through the function was more time-consuming, but it was a 
+valuable step in ensuring the function handled a variety of scenarios correctly. 
+Debugging proved to be extremely useful; it allowed us to quickly understand the 
+code and efficiently identify any potential bugs.
