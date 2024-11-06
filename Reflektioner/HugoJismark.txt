@@ -48,6 +48,28 @@ Debugging and testing: I played a role in debugging and testing the code. This i
 _____________________________________________________________________________________________________________________________________________________
 Reflections on My Role
 Throughout the project, I worked both on the backend and frontend, gaining valuable experience in both areas. I learned how to work within a team, structure planning, and use Docker for containerization. By the end of the project, I was more comfortable with debugging, researching new tools, and ensuring high-quality code. When we started this project, I was completely new to coding and had no clue about what went in to making a program like this. But as the project moved along, I have expanded my knowledgebase and it’s a big contrast if you compare now to when we started. 
+_____________________________________________________________________________________________________________________________________________________
+Komplettering 
 
+Selected Functionality
+I chose to test the send_order() and get_burgers() functions to make sure that they work as expected without connecting to the live database or kitchen API. Instead I temporarily used mock data to simulate the external services these functions rely on.
 
+I placed breakpoints in the following parts of the code:
+In the send_order() function, right before the kitchen API call, to make sure that the data is being sent.
+In the get_burgers() to check if the database query returned the correct list of burgers, particularly when using mock data.
 
+Using the Debugger
+I used the debugger's "Continue" button to move to the next breakpoint and "Step Over" to execute the current line without stepping into other functions. "Step Into" allowed me to dive into the function calls, and "Step Out" brought me back to the main flow of the program when I was done inspecting.
+
+Monitoring Variables
+I watched variables like order_data and burger_name to see how they changed as the code ran. This helped me ensure the right data was being passed to the API and that everything was structured correctly.
+
+Error Handling
+I tested situations like incomplete orders and simulated errors from the kitchen API. This allowed me to check that send_order() returned the right error codes and that get_burgers() handled cases where the database was empty or unavailable properly.
+
+Summary and Reflection
+What went well? Mocking the external services allowed me to test the core functionality.
+What went less well? Setting up the mocks for the API responses was initially tricky.
+What was easy? Monitoring the variables in the debugger made it easy to see how data flowed through the functions.
+What was difficult? Simulating different API error responses took some trial and error.
+Can debugging be useful for me? Definitely, it helped me ensure the code handled both normal and error cases correctly.
